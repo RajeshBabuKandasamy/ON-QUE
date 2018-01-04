@@ -19,11 +19,6 @@ body {
     padding-top: 1.5rem;
 }
 
-.row2{
-    position: fixed;
-    top: 35%;
-    left: 37%;
-}
 
 .row3{
     position: fixed;
@@ -36,7 +31,10 @@ body {
     top: -0.8rem;
 }
 .homeTitle{
-    font-size: 51px;
+    font-size: 5.5rem;
+}
+.headerTitleSection{
+    margin: 15% 0 0 8%;
 }
 .pText::before{
     content: "";
@@ -60,6 +58,14 @@ body {
     border-radius: 5px;
 }
 
+/*.onque-navbar-input {
+    padding: 6px 16px;
+    border-radius: 5px 0 0 5px;
+    border: 0 none;
+    outline: 0 none;
+    font-size: 22px;
+    color: #575757;
+}*/
 .onque-navbar-input {
     padding: 6px 16px;
     border-radius: 5px 0 0 5px;
@@ -67,7 +73,10 @@ body {
     outline: 0 none;
     font-size: 22px;
     color: #575757;
+    width: 40%;
 }
+
+
 .mainNav{
     position: absolute;
     top: -15px;
@@ -84,10 +93,6 @@ body {
     line-height: 1.5rem;
 }
 
-/*div.searchLocation:after {
-   color: #fff;
-   content: url("../images/downarrow.png");
-}*/
 li a {
     color:white;
 }
@@ -95,6 +100,16 @@ li a {
     position: relative;
     top: -10px;
 }
+/*.onque-navbar-button {
+    background-color: #2cc048;
+    border: 1px solid #2cc048;
+    border-radius: 0 5px 5px 0;
+    color: #575757;
+    padding: 10px 0;
+    height: 43px;
+    cursor: pointer;
+}*/
+
 .onque-navbar-button {
     background-color: #2cc048;
     border: 1px solid #2cc048;
@@ -103,6 +118,9 @@ li a {
     padding: 10px 0;
     height: 43px;
     cursor: pointer;
+    width: 4%;
+    padding-top: 14px;
+    margin-left: -3px;
 }
 .largenav {
     display: none;
