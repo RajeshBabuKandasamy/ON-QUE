@@ -36,36 +36,19 @@ body {
 .headerTitleSection{
     margin: 15% 0 0 8%;
 }
-.pText::before{
-    content: "";
-    border-left: 2px solid #8c8e8d;
-    height: 25px;
-    position: absolute;
-    top: 0px;
-    left: -17px;
-}
-.pText{
-    position: absolute;
-    top: 0px;
-    left: 145px;
+
+.freeText{
     font-size: 16px;
+    padding-right: 0rem !important;
 }
 .textBackground {
     width: 219px;
     height: 18px;
     background: #2cc048;
-    padding: 0px 6px 8px 6px;
+    padding: 0px 6px 1px 6px;
     border-radius: 5px;
 }
 
-/*.onque-navbar-input {
-    padding: 6px 16px;
-    border-radius: 5px 0 0 5px;
-    border: 0 none;
-    outline: 0 none;
-    font-size: 22px;
-    color: #575757;
-}*/
 .onque-navbar-input {
     padding: 6px 16px;
     border-radius: 5px 0 0 5px;
@@ -73,7 +56,6 @@ body {
     outline: 0 none;
     font-size: 22px;
     color: #575757;
-    width: 40%;
 }
 
 
@@ -92,6 +74,11 @@ body {
     margin-top: 0.2rem;
     line-height: 1.5rem;
 }
+.divider1{
+    border-right: 2px solid #8c8e8d;
+    margin-top: 0.2rem;
+    line-height: 2rem;
+}
 
 li a {
     color:white;
@@ -100,15 +87,6 @@ li a {
     position: relative;
     top: -10px;
 }
-/*.onque-navbar-button {
-    background-color: #2cc048;
-    border: 1px solid #2cc048;
-    border-radius: 0 5px 5px 0;
-    color: #575757;
-    padding: 10px 0;
-    height: 43px;
-    cursor: pointer;
-}*/
 
 .onque-navbar-button {
     background-color: #2cc048;
@@ -118,21 +96,17 @@ li a {
     padding: 10px 0;
     height: 43px;
     cursor: pointer;
-    width: 4%;
-    padding-top: 14px;
-    margin-left: -3px;
-}
-.largenav {
-    display: none;
-}
-
-.smallnav{
-    display: block;
 }
 
 .smallsearch{
     margin-left: 15px;
     margin-top: 15px;
+}
+
+.headerText{
+    font-size: 3.5rem;
+    position: relative;
+    top: -14px;
 }
 
 .menu{
