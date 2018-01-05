@@ -16,7 +16,7 @@ body {
 }
 
 .row1{
-    padding-top: 1.5rem;
+    padding-top: 2rem;
 }
 
 
@@ -31,7 +31,9 @@ body {
     top: -0.8rem;
 }
 .homeTitle{
-    font-size: 5.5rem;
+    font-family: "helvetica" !important;
+    font-size: 5rem;
+    font-weight: bold;
 }
 .headerTitleSection{
     margin: 15% 0 0 8%;
@@ -50,6 +52,7 @@ body {
 }
 
 .onque-navbar-input {
+    border: 2px solid white;
     padding: 6px 16px;
     border-radius: 5px 0 0 5px;
     border: 0 none;
@@ -57,7 +60,17 @@ body {
     font-size: 22px;
     color: #575757;
 }
-
+.onque-navbar-input::placeholder {
+  opacity:0.5;
+}
+.navbarContainer{
+    margin-left: 30%;
+    background-color: #4b535b;
+    border-radius: 5px;
+    margin-top: 2%;
+    padding: 0;
+    border: 10px solid #4b535b;
+}
 
 .mainNav{
     position: absolute;
