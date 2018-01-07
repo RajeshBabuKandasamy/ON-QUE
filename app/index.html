@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/libs/css/bootstrap.min.css">
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/home.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -23,7 +24,7 @@
 
   <div id="onque-navbar">
     <div class="container-fluid">
-        <div class="row row1">
+        <div class="row row1 myHeadercss">
             <div class="col-sm-4 col-md-4">
                <div class="row">
                 <div class="col-md-4 headerText"><span onclick="openNav()">ONQUE</span></div>
@@ -33,9 +34,9 @@
             </div>
             </div>
             <div class="onque-navbar-search smallsearch col-md-5 col-sm-5">
-                <div class="row">
-                    <input class="onque-navbar-input col-md-11 col-xs-10" type="" placeholder="eg: doctor name, location" name="">
-                    <button class="onque-navbar-button col-md-1 col-xs-1">
+                <div class="row" ng-show="searchFlag">
+                    <input class="onque-navbar-input col-md-10 col-xs-10" type="" placeholder="eg: doctor name, location" name="">
+                    <button class="onque-navbar-button col-md-2 col-xs-2">
                         <img style="width:19px;" src="assets/images/search.png"></img>
                     </button>
                 </div>
@@ -59,8 +60,8 @@
      </div>
 </div>
 </div>
-       
-  <div ui-view></div>
+
+<div ui-view></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -71,6 +72,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/libs/js/bootstrap.min.js"></script>
   <script src="app.js"></script>
+  <script src="run.js"></script>
+  <script src="config.js"></script>
+  <!-- Services -->
+  <script src="services/homeServices.js"></script>
+
+  <!-- Controller -->
   <script src="modules/home/homeController.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>

@@ -1,0 +1,18 @@
+.searchResults{
+    background-color: white;
+    padding-top: 15px;
+    margin-left: 27%;
+    width: 49%;
+}
+.user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.imgPosition{
+    margin-top: -8px;
+    margin-bottom: 5px;
+}
+.doctorName{
+    color:black;
+}

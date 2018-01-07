@@ -14,11 +14,13 @@ body {
     background-color: transparent;
     color: #FFFFFF;
 }
-
 .row1{
     padding-top: 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    height: 60px;
 }
-
 
 .row3{
     position: fixed;
@@ -52,24 +54,25 @@ body {
 }
 
 .onque-navbar-input {
-    border: 2px solid white;
-    padding: 6px 16px;
+    padding: 4px 15px;
     border-radius: 5px 0 0 5px;
     border: 0 none;
     outline: 0 none;
     font-size: 22px;
     color: #575757;
+    width: 90%;
 }
 .onque-navbar-input::placeholder {
   opacity:0.5;
 }
 .navbarContainer{
-    margin-left: 30%;
+    margin-left: 27%;
     background-color: #4b535b;
     border-radius: 5px;
     margin-top: 2%;
     padding: 0;
     border: 10px solid #4b535b;
+    width: 49%;
 }
 
 .mainNav{
@@ -106,9 +109,10 @@ li a {
     border: 1px solid #2cc048;
     border-radius: 0 5px 5px 0;
     color: #575757;
-    padding: 10px 0;
-    height: 43px;
+    padding: 10px 5px;
+    height: 39px;
     cursor: pointer;
+    width: 10%;
 }
 
 .smallsearch{
