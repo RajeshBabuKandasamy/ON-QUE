@@ -1,17 +1,18 @@
+<onque-header data-onqueheader-config="onqueheaderConfig"></onque-header>
 <div class="container-fluid">
    <div class="row">
-      <div class="col-md-12 col-sm-12" style="margin-top: 17%;">
+      <div class="col-md-12 col-sm-12 headTxt" style="margin-top: 17%;">
          <h2 class="homeTitle">Welcome to ON-QUE</h2>
       </div>
    </div>
    <div class="row">
       <div class="col-md-6 col-md-offset-3 col-sm-5 navbarContainer">
-         <input class="onque-navbar-input col-md-10 col-xs-10" type="" placeholder="eg: doctor name, location" name="">
+         <input class="onque-navbar-input col-md-10 col-xs-10" type="" placeholder="eg: doctor name, location" name="" ng-model="searchText" ng-keyup="searchKeyDownEvent($event)">
          <button class="onque-navbar-button col-md-2 col-xs-2">
          <img class="searchIcon" src="assets/images/search.png"></img>
          </button>
       </div>
-      <div class="col-md-6 col-md-offset-3 col-sm-5 searchResults">
+      <div class="col-md-6 col-md-offset-3 col-sm-5 searchResults" ng-show="searchSection">
          <!-- <div class="row">
             <div class="col-md-2 col-sm-2">
                 <img class="img-responsive user" src="https://lorempixel.com/400/200/sports/2/" alt="">
@@ -26,69 +27,22 @@
                    </p>
                </div>
             </div> -->
-         <div class="media">
+         <div class="media" ng-repeat="doctorList in doctor">
             <div class="media-left">
-               <img src="https://lorempixel.com/400/200/sports/2/" alt="dfsd" class="user media-object">
+               <img class="user" ng-src="{{doctorList.doctorId.pic}}">
             </div>
             <div class="media-body">
                <p class="doctorName">
-                  <span class="doctorFirstName">Alexander</span>
-                  Test Record
+                  <span class="doctorFirstName">{{doctorList.doctorId.parentId.name}}</span>
+                  ({{doctorList.doctorId.practiceId.name + ' - ' + doctorList.hospitalId.addressId.area}})
                </p>
                <p class="doctorDetail">
-                  <span class="textOrange">ark clinic</span>
+                  <span class="textOrange">{{doctorList.hospitalId.name}}</span>
                   sample texts
                </p>
             </div>
          </div>
          <hr />
-         <div class="media">
-            <div class="media-left">
-               <img src="https://lorempixel.com/400/200/sports/2/" alt="dfsd" class="user media-object">
-            </div>
-            <div class="media-body">
-               <p class="doctorName">
-                  <span class="doctorFirstName">Alexander</span>
-                  Test Record
-               </p>
-               <p class="doctorDetail">
-                  <span class="textOrange">ark clinic</span>
-                  sample texts
-               </p>
-            </div>
-         </div>
-         <hr />
-         <div class="media" >
-            <div class="media-left">
-               <img src="https://lorempixel.com/400/200/sports/2/" alt="dfsd" class="user media-object">
-            </div>
-            <div class="media-body">
-               <p class="doctorName">
-                  <span class="doctorFirstName">Alexander</span>
-                  Test Record
-               </p>
-               <p class="doctorDetail">
-                  <span class="textOrange">ark clinic</span>
-                  sample texts
-               </p>
-            </div>
-         </div>
-         <hr />
-         <div class="media">
-            <div class="media-left">
-               <img src="https://lorempixel.com/400/200/sports/2/" alt="dfsd" class="user media-object">
-            </div>
-            <div class="media-body">
-               <p class="doctorName">
-                  <span class="doctorFirstName">Alexander</span>
-                  Test Record
-               </p>
-               <p class="doctorDetail">
-                  <span class="textOrange">ark clinic</span>
-                  sample texts
-               </p>
-            </div>
-         </div>
       </div>
    </div>
 </div>

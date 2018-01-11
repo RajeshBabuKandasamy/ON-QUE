@@ -180,6 +180,7 @@ li a {
     color: #fff;        
 }
 
+
 @media screen and (max-height: 450px) {
   .sidenav a {font-size: 18px;}
 }
@@ -198,8 +199,41 @@ li a {
 .onque-navbar-button{
         width: 16%;
 }
+.navIcons{
+    width: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 22px;
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: url(../images/menu.png);
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.navbarContainer{
+    margin-left: 5% !important;
+    width: 88% !important;
+}
+.headTxt{
+    margin-top: 60% !important;
+}
+.homeTitle{
+    font-size: 3rem;
+}
+.headerText > span{
+    float: left;
+}
+.text-right{
+   font-size: 1.5rem;
+    float: right;
+    margin: 15px 0 0 0;
+
+}
 }
 
 .homeTitle, .headerText, .textBackground, .rightSide{
     color:#fff;
 }
+

@@ -3,32 +3,55 @@
 OnqueApp.controller('homeController', [
   '$scope','$window','DoctorsList',
   function ($scope, $window, DoctorsList) {	
-  $scope.searchFlag = false;
+  $scope.searchText = "";
+  $scope.searchSection = false;
+  $scope.doctor = [];
 
   angular.element($window).bind("scroll", function() {
-      $scope.position = window.pageYOffset;
-      if ($scope.position >= 300) {
-      	$scope.myObj = {
-	     'showSearch' : true,
-	     'opacity'    : 1,
-	     'color'	  : '#172635'
-	 	}
-	 	$scope.$emit('headercssDesign', $scope.myObj);
+      $scope.position = $window.scrollY;
+      console.log($scope.position);
+      var myEl = angular.element(document.querySelector('.myHeadercss'));
+      if ($scope.position >= 330) {
+       $scope.onqueheaderConfig = {
+        hambergFlag: true,
+        showSearch: true
+        }
+     myEl.css({'background-color':'#172636', 'opacity':'1'});
+	   }
+   else if ($scope.position <= 330) {
+      	$scope.onqueheaderConfig = {
+          hambergFlag: true,
+          showSearch: false
+        }
+        myEl.css({'background-color':'transparent', 'opacity':'1'});
     }
-    else if ($scope.position <= 300) {
-      	$scope.myObj = {
-	     'showSearch' : false,
-	     'opacity'    : 1,
-	     'color'	  : 'transparent'
-	 	}
-	 	$scope.$emit('headercssDesign', $scope.myObj);
-    }
+    $scope.$apply();
   });
-  $scope.mydata = 'raj';
-  var doctorsCollection = DoctorsList.result($scope.mydata);
-	doctorsCollection.success(function(data){
-	    console.log(data);
-	  
-	}).error(function(err){
-	    	            });
+
+  $scope.searchKeyDownEvent = function($event){
+        if($scope.searchText == ''){
+          $scope.searchSection = false;
+        }else{
+        $scope.getSearchresults(); 
+      }
+    }
+
+  $scope.getSearchresults = function(){
+  	var doctorsCollection = DoctorsList.result($scope.searchText);
+    	   doctorsCollection.success(function(data){
+          $scope.searchSection = true;
+      		$scope.doctor = data;
+    	    console.log($scope.doctor);
+    	  
+    	}).error(function(err){
+    	    	            });
+      }
+
+  // Header configuration
+    $scope.onqueheaderConfig = {
+        hambergFlag: true,
+        showSearch: false
+    }
+
+  
 }]);
