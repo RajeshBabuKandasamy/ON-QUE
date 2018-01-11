@@ -67,3 +67,10 @@
     padding: 2%;
     margin: 0;
 }
+
+@media(max-width: 767px){
+    .searchResults{
+    margin-left: 8%;
+    width: 82%;
+    }
+}
