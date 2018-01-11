@@ -12,7 +12,7 @@ body {
 }
 #onque-navbar {
     background-color: transparent;
-    color: #FFFFFF;
+   
 }
 .row1{
     padding-top: 2rem;
@@ -36,6 +36,7 @@ body {
     font-family: "helvetica" !important;
     font-size: 5rem;
     font-weight: bold;
+    text-align: center;
 }
 .headerTitleSection{
     margin: 15% 0 0 8%;
@@ -73,6 +74,7 @@ body {
     padding: 0;
     border: 10px solid #4b535b;
     width: 49%;
+    min-height: 60px;
 }
 
 .mainNav{
@@ -129,6 +131,9 @@ li a {
 .menu{
     cursor: pointer;
 }
+.searchIcon{
+    width: 19px;
+}
 
 @media screen and (min-width: 768px) {
     .largenav {
@@ -182,4 +187,19 @@ li a {
 .sidenav-heading{
     font-size: 36px;
     color: #fff;
+}
+@media(max-width: 767px){
+.searchIcon{
+    width: 15px;
+}
+.onque-navbar-input{
+    width: 84%;
+}
+.onque-navbar-button{
+        width: 16%;
+}
+}
+
+.homeTitle, .headerText, .textBackground, .rightSide{
+    color:#fff;
 }
