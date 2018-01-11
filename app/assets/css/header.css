@@ -145,6 +145,19 @@ li a {
     .smallsearch{
         margin: 0px;
     }
+   
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    .greenTxt{
+        float: left;
+        bottom: 20px;
+    }
+     .headTxt{
+            margin-top: 40% !important;
+    }
+    .headerText{
+        float: left;
+    }
 }
 
 /*Sidenav*/

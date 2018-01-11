@@ -10,6 +10,11 @@ OnqueApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider
 		templateUrl : 'modules/home/home.html',
 		controller : 'homeController'
  });
+   $stateProvider.state('appointment', {
+		url : '/appointment',
+		templateUrl : 'modules/appointment/appointment.html',
+		
+ });
 
 $urlRouterProvider.otherwise('/home');
 
