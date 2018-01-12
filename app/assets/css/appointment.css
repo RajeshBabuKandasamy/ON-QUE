@@ -1,7 +1,8 @@
 .appointImg{
-	border-radius: 50%;
-	    margin: 0 auto;
+    border-radius: 50%;
+    margin: 0 auto;
     display: block;
+    border: 1px solid #b7b7b7;
 }
 .bgWhite{
 	background-color: #fff;
@@ -20,5 +21,69 @@ font-weight: bold;
 box-shadow: 0px 0px 5px 0px rgba(178, 162, 162, 0.75);
 -moz-box-shadow: 0px 0px 5px 0px rgba(178, 162, 162, 0.75);
 -webkit-box-shadow: 0px 0px 5px 0px rgba(178, 162, 162, 0.75);
-border-radius: 10px;
+border-radius: 3px;
+}
+.card{
+	background-color: #fff;
+	padding: 10% 0;
+}
+.cardPad{
+	    padding: 0 5.5px;
+	    margin:15px 0;
+	        width: 20%;
+}
+.card-title{
+	color: #403f3f;
+}
+.card-title p{
+	color: #a2a1a1;
+	}
+.card-text {
+    color: #717772;
+}
+.card.cardBorder:hover {
+    border: 1px solid #2cc048;
+}
+.btn-primary.btnDates{
+    color: #fff;
+    background-color: #717772;
+    border-color: #717772;
+    margin-bottom: 7px;
+
+}
+.card-body {
+    padding: 0 10%;
+}
+.btn{
+	width: 80%;
+}
+.btn-primary.btnApp{
+	color: #fff;
+	  background-color: #2cc048;
+    border-color: #2cc048;
+}
+.lineBottom hr{
+	    margin-top: 0;
+    margin-bottom: 10px;
+}
+@media(max-width: 767px){
+	.cardPad{
+		width: 100%;
+		margin: 50px 0 -35px 0;
+	}
+}
+@media(min-width: 768px) and (max-width: 1024px){
+	.cardPad {
+    padding: 0 5.5px;
+    margin: 30px 1px -10px 0px;
+    width: 33%;
+    float: left;
+}
+}
+@media (min-width: 1200px){
+.container {
+    width: 100%;
+    padding: 0 2.5%;
+    background-color: #fff;
+}
 }
