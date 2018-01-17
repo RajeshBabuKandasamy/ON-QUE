@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var OnqueApp = angular.module('OnqueApp', ['ui.router','onqueAppConfig']);
+var OnqueApp = angular.module('OnqueApp', ['ui.router','ngAnimate', 'onqueAppConfig']);
 
 OnqueApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   
@@ -9,11 +9,9 @@ OnqueApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider
 		url : '/home',
 		templateUrl : 'modules/home/home.html',
 		controller : 'homeController'
- });
-   $stateProvider.state('appointment', {
+ }).state('appointment', {
 		url : '/appointment',
-		templateUrl : 'modules/appointment/appointment.html',
-		
+		templateUrl : 'modules/appointment/appointment.html'		
  });
 
 $urlRouterProvider.otherwise('/home');
