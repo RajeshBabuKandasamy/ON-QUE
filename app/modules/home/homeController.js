@@ -31,7 +31,7 @@ OnqueApp.controller('homeController', [
      $scope.searchSection = false;
      myEl.css({'background-color':'#172636', 'opacity':'1'});
 	   }
-   else if ($scope.position <= 295) {
+   else if ($scope.position < 295) {
       	$scope.onqueheaderConfig = {
           hambergFlag: true,
           showSearch: false
