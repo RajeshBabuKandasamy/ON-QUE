@@ -3,6 +3,8 @@
     margin: 0 auto;
     display: block;
     border: 1px solid #b7b7b7;
+    width: 50%;
+    height: 12rem;
 }
 .bgWhite{
 	background-color: #fff;

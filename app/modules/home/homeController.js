@@ -1,8 +1,8 @@
 'use strict';
 
 OnqueApp.controller('homeController', [
-  '$scope','$window','DoctorsList',
-  function ($scope, $window, DoctorsList) {	
+  '$scope','$window','DoctorsList','$rootScope','$state','dataService',
+  function ($scope, $window, DoctorsList, $rootScope, $state, dataService) {	
   $scope.searchText = "";
   $scope.searchSection = false;
   $scope.searchInputSection = true;
@@ -54,11 +54,20 @@ $scope.searchKeyDownEvent = function($event){
       }
     }
 
+  $scope.searchDoctor = function(){
+        dataService.setSearchData($scope.searchText);
+        $state.go('appointment');
+  }
+
   $scope.getSearchresults = function(){
   	var doctorsCollection = DoctorsList.result($scope.searchText);
     	   doctorsCollection.success(function(data){
-          $scope.searchSection = true;
-      		$scope.doctor = data; 
+          if(data != ''){
+            $scope.searchSection = true;
+        		$scope.doctor = data;
+          }else{
+            $scope.searchSection = false;
+          } 
     	}).error(function(err){
     	    	            });
       }

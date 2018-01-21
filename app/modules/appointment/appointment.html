@@ -89,6 +89,78 @@
       <!-- Page Features -->
       <div class="row text-center">
 
+        <div class="col-lg-2 col-md-6 mb-4 cardPad" ng-repeat="doctor in searchDoctorList">
+          <div class="card cardBorder">
+            <img class="card-img-top appointImg" ng-src="{{doctor.doctorId.pic}}" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title mb0">{{doctor.doctorId.parentId.name}}</h4>
+              <p>{{doctor.doctorId.practiceId.name}}</p>
+             <div class="lineBottom">
+                <hr />
+              </div>
+              <p class="card-text">{{doctor.hospitalId.addressId.street1 + ', '+ doctor.hospitalId.addressId.street2 +', '+ doctor.hospitalId.addressId.area + ', '+ doctor.hospitalId.addressId.city}}.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary btnDates">period</a>
+              <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-2 col-md-6 mb-4 cardPad">
+          <div class="card cardBorder">
+            <img class="card-img-top appointImg" src="https://lorempixel.com/100/100/sports/2/" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title mb0">Card title</h4>
+              <p>cardio</p>
+             <div class="lineBottom">
+                <hr />
+              </div>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit.</p>
+            </div>
+            <div class="card-footer">
+             <a href="#" class="btn btn-primary btnDates">Find Out More!</a>
+              <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 cardPad">
+          <div class="card cardBorder">
+            <img class="card-img-top appointImg" src="https://lorempixel.com/100/100/sports/2/" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title mb0">Card title</h4>
+              <p>cardio</p>
+             <div class="lineBottom">
+                <hr />
+              </div>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit.</p>
+            </div>
+            <div class="card-footer">
+             <a href="#" class="btn btn-primary btnDates">Find Out More!</a>
+              <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 cardPad">
+          <div class="card cardBorder">
+            <img class="card-img-top appointImg" src="https://lorempixel.com/100/100/sports/2/" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title mb0">Card title</h4>
+              <p>cardio</p>
+             <div class="lineBottom">
+                <hr />
+              </div>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit.</p>
+            </div>
+            <div class="card-footer">
+             <a href="#" class="btn btn-primary btnDates">Find Out More!</a>
+              <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+        
         <div class="col-lg-2 col-md-6 mb-4 cardPad">
           <div class="card cardBorder">
             <img class="card-img-top appointImg" src="https://lorempixel.com/100/100/sports/2/" alt="Card image cap">
@@ -105,79 +177,7 @@
               <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
             </div>
           </div>
-        </div>
-
-        <div class="col-lg-2 col-md-6 mb-4 cardPad">
-          <div class="card cardBorder">
-            <img class="card-img-top appointImg" src="https://lorempixel.com/100/100/sports/2/" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title mb0">Card title</h4>
-              <p>cardio</p>
-             <div class="lineBottom">
-                <hr />
-              </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit.</p>
-            </div>
-            <div class="card-footer">
-             <a href="#" class="btn btn-primary btnDates">Find Out More!</a>
-              <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-6 mb-4 cardPad">
-          <div class="card cardBorder">
-            <img class="card-img-top appointImg" src="https://lorempixel.com/100/100/sports/2/" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title mb0">Card title</h4>
-              <p>cardio</p>
-             <div class="lineBottom">
-                <hr />
-              </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit.</p>
-            </div>
-            <div class="card-footer">
-             <a href="#" class="btn btn-primary btnDates">Find Out More!</a>
-              <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-6 mb-4 cardPad">
-          <div class="card cardBorder">
-            <img class="card-img-top appointImg" src="https://lorempixel.com/100/100/sports/2/" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title mb0">Card title</h4>
-              <p>cardio</p>
-             <div class="lineBottom">
-                <hr />
-              </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit.</p>
-            </div>
-            <div class="card-footer">
-             <a href="#" class="btn btn-primary btnDates">Find Out More!</a>
-              <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-6 mb-4 cardPad">
-          <div class="card cardBorder">
-            <img class="card-img-top appointImg" src="https://lorempixel.com/100/100/sports/2/" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title mb0">Card title</h4>
-              <p>cardio</p>
-             <div class="lineBottom">
-                <hr />
-              </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary btnDates">Find Out More!</a>
-              <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
-            </div>
-          </div>
-        </div>
+        </div> -->
 <!-- 
         <div class="col-lg-2 col-md-6 mb-4 cardPad">
           <div class="card cardBorder">

@@ -11,7 +11,7 @@
    <div class="row">
       <div class="col-md-6 col-md-offset-3 col-sm-5 navbarContainer" ng-show="searchInputSection">
          <input class="onque-navbar-input col-md-10 col-xs-10" type="" placeholder="eg: doctor name, location" name="" ng-model="searchText" ng-keyup="searchKeyDownEvent($event)">
-         <button class="onque-navbar-button col-md-2 col-xs-2">
+         <button class="onque-navbar-button col-md-2 col-xs-2" ng-click="searchDoctor()">
          <img class="searchIcon" src="assets/images/search.png"></img>
          </button>
       </div>
