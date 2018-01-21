@@ -9,43 +9,29 @@
       </div>
    </div>
    <div class="row">
-      <div class="col-md-6 col-md-offset-3 col-sm-5 navbarContainer">
+      <div class="col-md-6 col-md-offset-3 col-sm-5 navbarContainer" ng-show="searchInputSection">
          <input class="onque-navbar-input col-md-10 col-xs-10" type="" placeholder="eg: doctor name, location" name="" ng-model="searchText" ng-keyup="searchKeyDownEvent($event)">
          <button class="onque-navbar-button col-md-2 col-xs-2">
          <img class="searchIcon" src="assets/images/search.png"></img>
          </button>
       </div>
       <div class="col-md-6 col-md-offset-3 col-sm-5 searchResults" ng-show="searchSection">
-         <!-- <div class="row">
-            <div class="col-md-2 col-sm-2">
-                <img class="img-responsive user" src="https://lorempixel.com/400/200/sports/2/" alt="">
-            </div>
-               <div class="col-md-10 col-sm-10 txtMiddle">
-                   <p class="doctorName">
-                     <span class="doctorFirstName">Alexander</span>
-                   Test Record
-                   </p>
-                   <p class="doctorDetail">
-                     <span class="docClinics">ark clinic</span>
-                   </p>
-               </div>
-            </div> -->
          <div class="media" ng-repeat="doctorList in doctor">
             <div class="media-left">
                <img class="user" ng-src="{{doctorList.doctorId.pic}}">
             </div>
             <div class="media-body">
                <p class="doctorName">
-                  <span class="doctorFirstName">{{doctorList.doctorId.parentId.name}}</span>
-                  ({{doctorList.doctorId.practiceId.name + ' - ' + doctorList.hospitalId.addressId.area}})
+                  <span class="doctorFirstName">{{doctorList.doctorId.parentId.name +' '}}&nbsp;</span>
+                  <span class="doctorDetail">( {{doctorList.doctorId.practiceId.name + '  -  ' + doctorList.hospitalId.addressId.area}} )</span>
                </p>
                <p class="doctorDetail">
-                  <span class="textOrange">{{doctorList.hospitalId.name}}</span>
-                  sample texts
+                  <span class="textOrange">{{doctorList.hospitalId.name}}, </span>
+                  <span>{{doctorList.hospitalId.addressId.street1 + ', '+ doctorList.hospitalId.addressId.street2 +', '+ doctorList.hospitalId.addressId.city +' - '+ doctorList.hospitalId.addressId.pincode +' '+ doctorList.hospitalId.addressId.country}}.</span>
                </p>
             </div>
+            <hr class="searchlinebottom">
          </div>
-         <hr />
       </div>
    </div>
 </div>

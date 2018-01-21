@@ -20,14 +20,21 @@
 .txtMiddle{
     display: table;
 }
-/* .doctorDetail{
-    color:#000000;
-} */
+p.doctorDetail{
+    font-size: 14px;
+}
+span.doctorDetail{
+    font-size: 14px;
+}
+.doctorFirstName{
+    font-size: 22px;
+    color: #2e2f2e;
+}
 .media-body, .media-left, .media-right{
     vertical-align: middle;
 }
 .doctorDetail .textOrange{
-    color: #E7B204;
+    color: #E8b005;
 }
 .searchResults hr{
     margin: 0;
@@ -64,8 +71,18 @@
     
 }
 .media{
-    padding: 2%;
     margin: 0;
+    padding: 1% 2% 0% 2%;
+    margin: 0;
+}
+.media:hover .searchlinebottom{
+    position: relative;
+    top: 1px;
+}
+
+hr.searchlinebottom{
+    margin-top: 0;
+    margin-bottom: 0px;
 }
 
 @media(max-width: 767px){
