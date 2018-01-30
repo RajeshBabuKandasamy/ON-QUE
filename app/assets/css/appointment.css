@@ -13,7 +13,7 @@
 	text-align: center;
 }
 .mb0{
-margin-bottom: 0;
+margin-bottom: 0 !important;
 font-weight: bold;
 }
 .lineBottom{
@@ -32,7 +32,7 @@ border-radius: 3px;
 .cardPad{
 	    padding: 0 5.5px;
 	    margin:15px 0;
-	        width: 20%;
+	        width: 249px;
 }
 .card-title{
 	color: #403f3f;
@@ -46,10 +46,10 @@ border-radius: 3px;
 .card.cardBorder:hover {
     border: 1px solid #2cc048;
 }
-.btn-primary.btnDates{
+.card-footer .btn-primary.btnDates{
     color: #fff;
-    background-color: #717772;
-    border-color: #717772;
+    background-color: #717772 !important;
+    border-color: #717772 !important;
     margin-bottom: 7px;
 
 }
@@ -63,11 +63,66 @@ border-radius: 3px;
 	color: #fff;
 	  background-color: #2cc048;
     border-color: #2cc048;
+        font-size: 15px;
+    font-weight: bold;
 }
 .lineBottom hr{
 	    margin-top: 0;
     margin-bottom: 10px;
 }
+.card .liveTxt{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background-color: #ef9904;
+    color: #ffffff;
+   padding: 1px 6px;
+    border-radius: 18%;
+    font-size: 1rem;
+    }
+    .card-body .depTxt {
+    color: #a2a1a1;
+}
+.navHeader ul li {
+    display: inline-block;
+    margin-right: 1%;
+    background:transparent;
+}
+.navHeader ul li a {
+    width: 100%;
+    border: 1px solid #606162;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    color: #606162;
+        background-color: transparent;
+    padding: 2px 25px;
+}
+.navHeader ul li a:hover {
+background-color: #2cc048;
+ border: 1px solid #2cc048;
+
+}
+.navHeader{
+	    background: #fff;
+    padding: 1% 0;
+}
+.navHeader ul{
+	margin-bottom: 0;
+}
+.navFilters{
+	width: 100%;
+	display: block;
+	background-color: #172635;
+	min-height: 50px;
+}
+.navFilters ul li {
+    display: inline-block;
+    }
+.navFilters ul li label{
+    	color: #8c8e8d;
+    }
 @media(max-width: 767px){
 	.cardPad{
 		width: 100%;
@@ -84,8 +139,9 @@ border-radius: 3px;
 }
 @media (min-width: 1200px){
 .container {
-    width: 100%;
+    width: 100vw;
     padding: 0 2.5%;
     background-color: #fff;
+
 }
 }
