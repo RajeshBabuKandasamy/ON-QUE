@@ -16,6 +16,23 @@ OnqueApp.factory('DoctorsList', ['API_URL', '$http', function (API_URL, $http) {
     }
 }]);
 
+OnqueApp.factory('DoctorDetailList', ['API_URL', '$http', function (API_URL, $http) {
+    return{
+        result:function(docId){
+            var name = $http({
+                method:'GET',
+                url: API_URL + '/api/pub/hospitaldoctor/'+ docId 
+            }).success(function(data){
+                return data;
+            }).error(function(err){
+                return err;
+            });
+            return name;
+      
+        }
+    }
+}]);
+
 // Login service
 /*OnqueApp.factory('LoginService', ['API_URL', '$http', function(API_URL, $http){
   return{

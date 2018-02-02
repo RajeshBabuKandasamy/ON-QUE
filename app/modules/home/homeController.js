@@ -7,7 +7,8 @@ OnqueApp.controller('homeController', [
   $scope.searchSection = false;
   $scope.searchInputSection = true;
   $scope.doctor = [];
-  
+  localStorage.setItem("searchedText", '');
+
   angular.element($window).bind("scroll", function() {
       $scope.position = $window.scrollY;
       $scope.windowWidth = $window.innerWidth;
@@ -55,7 +56,15 @@ $scope.searchKeyDownEvent = function($event){
     }
 
   $scope.searchDoctor = function(){
+        dataService.setDoctorId('');
         dataService.setSearchData($scope.searchText);
+        if($scope.searchText != ''){
+        $state.go('appointment');
+      }
+  }
+
+  $scope.searchParticularDoctor = function(docId){
+        dataService.setDoctorId(docId);
         $state.go('appointment');
   }
 
