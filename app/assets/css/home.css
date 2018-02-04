@@ -21,10 +21,10 @@
     display: table;
 }
 p.doctorDetail{
-    font-size: 14px;
+    font-size: 15px;
 }
 span.doctorDetail{
-    font-size: 14px;
+    font-size: 15px;
 }
 .doctorFirstName{
     font-size: 22px;
@@ -35,6 +35,8 @@ span.doctorDetail{
 }
 .doctorDetail .textOrange{
     color: #E8b005;
+    font-weight: bold;
+    font-size: 15px;
 }
 .searchResults hr{
     margin: 0;

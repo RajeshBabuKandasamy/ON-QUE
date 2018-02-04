@@ -83,7 +83,7 @@
    <onque-header data-onqueheader-config="onqueheaderConfig"></onque-header>
 </div>
 <div class="navHeader">
-   <ul>
+   <ul class="mb2">
       <li><a href="#" class="btn btn-primary btnDept">Psychiatrist</a></li>
       <li><a href="#" class="btn btn-primary btnDept">Dermatelogist</a></li>
       <li><a href="#" class="btn btn-primary btnDept">Cardiologist</a></li>
@@ -91,26 +91,26 @@
    </ul>
 </div>
 <div class="navFilters">
-   <ul class="mb0">
+   <ul class="mb1">
       <li>
          <label class="sort">Filter By</label>
       </li>
       <li>
          <label class="checks">Location
-         <input type="checkbox" >
+         <input type="radio" name="filter" ng-change="filterChange('location')" ng-model="filterValue" value="location">
          <span class="checkmark"></span>
          </label>
       </li>
       <li>
          <label class="checks">Speciality Type
-         <input type="checkbox" >
+         <input type="radio" name="filter" ng-change="filterChange('speciality')" ng-model="filterValue" value="speciality">
          <span class="checkmark"></span>
          </label>
       </li>
-      <li><a href="#">Reset Filter</a></li>
+      <li ng-click="resetFilter()"><a class="resetFilter">Reset Filter</a></li>
    </ul>
 </div>
-<div class="navHeaders">
+<div class="navHeaders" ng-show="showFilterResult">
    <ul>
       <li><a href="#" class="btn btn-primary btnDept">Birmingham</a></li>
       <li><a href="#" class="btn btn-primary btnDept">Woodstock</a></li>
@@ -134,7 +134,7 @@
 </div>
 <div class="search-results">
    <ul>
-      <li>  <label>53 results</label></li>
+      <li>  <label>{{doctorListCount}} results</label></li>
       <li><a href="#" class="btn btn-primary btnDept">Psychiatrist<span>x</span></a></li>
       <li><a href="#" class="btn btn-primary btnDept">Dermatelogist<span>x</span></a></li>
       <li><a href="#" class="btn btn-primary btnDept">Cardiologist<span>x</span></a></li>
