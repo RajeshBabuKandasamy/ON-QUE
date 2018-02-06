@@ -67,8 +67,9 @@ OnqueApp.controller('appointmentController', [
   // Search for individual Doctor record
   $scope.searchDoctorRecord = function(doctorId){
         var doctorDetailCollection = DoctorDetailList.result(doctorId);
-         doctorDetailCollection.success(function(data){
-          $scope.searchDoctorList = data;
+         doctorDetailCollection.success(function(data){ 
+          $scope.doctorDetails = data;
+          $scope.doctorListCount = 1;
           $timeout( function(){
             $scope.cardMaxHeight();
         }, 1000 );
@@ -76,26 +77,31 @@ OnqueApp.controller('appointmentController', [
           });
     }
 
-
   $scope.getSessionText = localStorage.getItem("searchedText");
-
+  $scope.getSessionDoctorId = localStorage.getItem("searchedDoctorId");
   var doctorId = dataService.getDoctorId();
-  // if(doctorId != '')
-  // {
-  //     $scope.searchDoctorRecord(doctorId);
+  var stext = dataService.getSearchData();
+  
+  if(stext == "" && doctorId != "")
+  {
+      localStorage.setItem("searchedDoctorId",JSON.stringify(doctorId));
+      $scope.searchDoctorRecord(doctorId);
 
-  // }else{
-  if($scope.getSessionText == "")
+  }else if($scope.getSessionDoctorId != "")
+  {
+      $scope.searchDoctorRecord(JSON.parse($scope.getSessionDoctorId));
+  }
+  
+  if(stext != "" && doctorId == "")
   { 
-    var stext = dataService.getSearchData();         
-    if(stext != ''){
     localStorage.setItem("searchedText",JSON.stringify(stext));
     $scope.searchRecord(stext);
-  }
- }else{
+
+ }else if($scope.getSessionText != "")
+ {
     $scope.searchRecord(JSON.parse($scope.getSessionText));
-  }
-//}
+ }
+
  
   // Header configuration
     $scope.onqueheaderConfig = {

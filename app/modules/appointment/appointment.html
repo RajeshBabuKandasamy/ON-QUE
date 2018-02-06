@@ -144,7 +144,7 @@
 <!-- <div class="container-fluid bgWhite"> -->
 <div class="container">
 <!-- Page Features -->
-<div class="row text-center row-eq-height">
+<div class="row text-center row-eq-height" ng-if="searchDoctorList">
    <div class="col-lg-2 col-md-6 mb-4 cardPad" ng-repeat="doctor in searchDoctorList">
       <div class="card cardBorder">
          <span class="liveTxt">LIVE</span>
@@ -156,6 +156,26 @@
                <hr />
             </div>
             <p class="card-text">{{doctor.hospitalId.addressId.street1 + ', '+ doctor.hospitalId.addressId.street2 +', '+ doctor.hospitalId.addressId.area + ', '+ doctor.hospitalId.addressId.city}}.</p>
+         </div>
+         <div class="card-footer">
+            <a href="#" class="btn btn-primary btnDates">period</a>
+            <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="row text-center row-eq-height" ng-if="doctorDetails">
+   <div class="col-lg-2 col-md-6 mb-4 cardPad">
+      <div class="card cardBorder">
+         <span class="liveTxt">LIVE</span>
+         <img class="card-img-top appointImg" ng-src="{{doctorDetails.doctorId.pic}}" alt="Card image cap">
+         <div class="card-body">
+            <h4 class="card-title mb0">{{doctorDetails.doctorId.parentId.name}}</h4>
+            <p class="depTxt">{{doctorDetails.doctorId.practiceId.name}}</p>
+            <div class="lineBottom">
+               <hr />
+            </div>
+            <p class="card-text">{{doctorDetails.hospitalId.addressId.street1 + ', '+ doctorDetails.hospitalId.addressId.street2 +', '+ doctorDetails.hospitalId.addressId.area + ', '+ doctorDetails.hospitalId.addressId.city}}.</p>
          </div>
          <div class="card-footer">
             <a href="#" class="btn btn-primary btnDates">period</a>

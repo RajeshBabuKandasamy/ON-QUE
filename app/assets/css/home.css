@@ -70,7 +70,7 @@ span.doctorDetail{
 .media:hover, .media .media-body:hover{
     background-color: #2cc048;
     color: #fff;
-    
+    cursor: pointer;
 }
 .media{
     margin: 0;

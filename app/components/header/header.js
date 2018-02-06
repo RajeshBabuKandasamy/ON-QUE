@@ -4,7 +4,7 @@
 
 OnqueApp.directive('onqueHeader',['$rootScope','$timeout', function ($rootScope, $timeout){
   
-        var linker = function ($scope, element, attrs) {
+        var linker = function ($scope) {
 
           $scope.hideSideMenu = true;
           $scope.showSideMenu = false;
@@ -20,6 +20,13 @@ OnqueApp.directive('onqueHeader',['$rootScope','$timeout', function ($rootScope,
                   }, 500);
               }
           }
+
+          $scope.loginPopup = function() {
+        
+            //calling the popup service
+            popupService.loginPopup();
+          }
+
       }
       return {
           restrict: 'E',

@@ -1,7 +1,7 @@
 OnqueApp.service('dataService', [
   function(){
     var self = this;
-    this.searchData = {};
+    this.searchData = '';
     this.doctorId = '';
 
     this.getSearchData = function(){

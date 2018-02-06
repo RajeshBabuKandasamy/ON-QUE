@@ -8,6 +8,7 @@ OnqueApp.controller('homeController', [
   $scope.searchInputSection = true;
   $scope.doctor = [];
   localStorage.setItem("searchedText", '');
+  localStorage.setItem("searchedDoctorId", '');
 
   angular.element($window).bind("scroll", function() {
       $scope.position = $window.scrollY;
