@@ -2,9 +2,9 @@
  * OnqueApp header directive
  */
 
-OnqueApp.directive('onqueHeader',['$rootScope','$timeout', function ($rootScope, $timeout){
+OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService', function ($rootScope, $timeout, popupService){
   
-        var linker = function ($scope) {
+        var linker = function ($scope, element, attrs) {
 
           $scope.hideSideMenu = true;
           $scope.showSideMenu = false;

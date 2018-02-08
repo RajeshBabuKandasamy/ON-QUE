@@ -1,6 +1,4 @@
-/**
- * Utility service to call popups in the screen
- */
+
 OnqueApp.service('popupService', ['ngDialog', '$interval', '$window', '$timeout',
 
 function popupService(ngDialog, $interval, $window, $timeout) {
@@ -31,7 +29,8 @@ function popupService(ngDialog, $interval, $window, $timeout) {
 	
 	
 	this.loginPopup = function(message, buttonText, width, callBack, timeoutTime) {
-		ngDialog.close();		
+		self.isPopupDisplayed = false;
+		ngDialog.close();
 		if(!self.isPopupDisplayed) {
 			self.isPopupDisplayed = true;
 			$timeout(function() {

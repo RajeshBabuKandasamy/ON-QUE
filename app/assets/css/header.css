@@ -14,6 +14,11 @@ body {
     background-color: transparent;
    
 }
+
+.loginLink:hover{
+    cursor: pointer;
+}
+
 .row1{
     padding-top: 2rem;
     position: fixed;
@@ -207,7 +212,7 @@ li a {
     width: 15px;
 }
 .onque-navbar-input{
-    width: 80%;
+    width: 84%;
 }
 .onque-navbar-button{
         width: 16%;
