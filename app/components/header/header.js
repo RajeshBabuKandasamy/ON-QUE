@@ -2,7 +2,7 @@
  * OnqueApp header directive
  */
 
-OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService','DoctorsList', function ($rootScope, $timeout, popupService, DoctorsList){
+OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService','DoctorsList','$state','dataService', function ($rootScope, $timeout, popupService, DoctorsList, $state, dataService){
   
         var linker = function ($scope, element, attrs) {
 
@@ -20,6 +20,26 @@ OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService','Doctor
                   }, 500);
               }
           }
+          
+          $scope.navigateToHome = function(){
+            $state.go('home');
+          }
+
+          $scope.headerSearchDoctor = function(){
+            //dataService.setSearchData($scope.headerSearchText);
+            if($scope.headerSearchText != ''){
+              localStorage.setItem("searchedText",JSON.stringify($scope.headerSearchText));
+              $state.go('appointment');
+          }
+        }
+
+        $scope.headerSearchParticularDoctor = function(docId){
+          //dataService.setDoctorId(docId);
+          if(docId != ''){
+            localStorage.setItem("searchedDoctorId",JSON.stringify(docId));
+            $state.go('appointment');
+          }
+        }
 
           $scope.headerSearchKeyDownEvent = function($event){
             if($scope.headerSearchText == ''){
@@ -29,11 +49,9 @@ OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService','Doctor
             }
          }
 
-         // $rootScope.$on('headerSearchSectionFlag', function (event, data) {
-         
-         //    $scope.headerSearchSection = data;                     
-         
-         // });
+         $rootScope.$on('headerSearchSectionFlag', function (event, data) {
+            $scope.headerSearchSection = data; 
+         });
 
           $scope.loginPopup = function() {
             //calling the popup service
@@ -55,10 +73,11 @@ OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService','Doctor
 
       }
       return {
-          restrict: 'E',
+          restrict: 'AE',
           link: linker,
           scope: {
-            onqueheaderConfig: "="
+            onqueheaderConfig: "=",
+            headerSearchText: "=headerSearchText"
           },
           templateUrl: 'components/header/header.html'
       };

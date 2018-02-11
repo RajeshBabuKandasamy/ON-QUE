@@ -4,7 +4,6 @@ OnqueApp.controller('appointmentController', [
   function ($scope, $window, $timeout, $rootScope, dataService, DoctorsList, DoctorDetailList, $timeout) {	
   
   $scope.searchText = "";
-  $scope.stext = "";
   $scope.filterValue = "";
   $scope.showFilterResult = false;
 
@@ -76,33 +75,21 @@ OnqueApp.controller('appointmentController', [
       }).error(function(err){
           });
     }
-
-  $scope.getSessionText = localStorage.getItem("searchedText");
-  $scope.getSessionDoctorId = localStorage.getItem("searchedDoctorId");
-  var doctorId = dataService.getDoctorId();
-  var stext = dataService.getSearchData();
   
-  if(stext == "" && doctorId != "")
-  {
-      localStorage.setItem("searchedDoctorId",JSON.stringify(doctorId));
-      $scope.searchDoctorRecord(doctorId);
 
-  }else if($scope.getSessionDoctorId != "")
-  {
+    $scope.getSessionText = localStorage.getItem("searchedText");
+    $scope.getSessionDoctorId = localStorage.getItem("searchedDoctorId");
+    
+   if($scope.getSessionDoctorId != '' && $scope.getSessionText == ''){
+
       $scope.searchDoctorRecord(JSON.parse($scope.getSessionDoctorId));
-  }
-  
-  if(stext != "" && doctorId == "")
-  { 
-    localStorage.setItem("searchedText",JSON.stringify(stext));
-    $scope.searchRecord(stext);
+   }
+   if($scope.getSessionDoctorId == '' && $scope.getSessionText != ''){
 
- }else if($scope.getSessionText != "")
- {
-    $scope.searchRecord(JSON.parse($scope.getSessionText));
- }
-
+      $scope.searchRecord(JSON.parse($scope.getSessionText));
+   }
  
+  
   // Header configuration
     $scope.onqueheaderConfig = {
         showSearch: true
