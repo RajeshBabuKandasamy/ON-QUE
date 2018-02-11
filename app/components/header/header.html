@@ -25,7 +25,7 @@
       </div>
       <div class="onque-navbar-search smallsearch col-md-5 col-sm-3">
          <div class="row" ng-show="onqueheaderConfig.showSearch">
-            <input class="onque-navbar-input col-md-10 col-xs-10" type="" placeholder="eg: doctor name, location" name="">
+            <input class="onque-navbar-input col-md-10 col-xs-10" type="" placeholder="eg: doctor name, location" name="" ng-model="headerSearchText" ng-keyup="headerSearchKeyDownEvent($event)">
             <button class="onque-navbar-button col-md-2 col-xs-2">
             <img style="width:19px;" src="assets/images/search.png"></img>
             </button>
@@ -50,4 +50,22 @@
       </div>
    </div>
 </div>
+<div class="col-md-6 col-md-offset-3 col-sm-5 headerSearchResults" ng-show="headerSearchSection">
+         <div class="media" ng-repeat="doctorList in doctorHeader" ng-click='searchParticularDoctor(doctorList.id)'>
+            <div class="media-left">
+               <img class="user" ng-src="{{doctorList.doctorId.pic}}">
+            </div>
+            <div class="media-body">
+               <p class="doctorName">
+                  <span class="doctorFirstName">{{doctorList.doctorId.parentId.name +' '}}&nbsp;</span>
+                  <span class="doctorDetail">( {{doctorList.doctorId.practiceId.name + '  -  ' + doctorList.hospitalId.addressId.area}} )</span>
+               </p>
+               <p class="doctorDetail">
+                  <span class="textOrange">{{doctorList.hospitalId.name}}, </span>
+                  <span>{{doctorList.hospitalId.addressId.street1 + ', '+ doctorList.hospitalId.addressId.street2 +', '+ doctorList.hospitalId.addressId.city +' - '+ doctorList.hospitalId.addressId.pincode +' '+ doctorList.hospitalId.addressId.country}}.</span>
+               </p>
+            </div>
+            <hr class="searchlinebottom">
+         </div>
+      </div>
 </div>

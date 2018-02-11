@@ -14,6 +14,7 @@ OnqueApp.controller('homeController', [
       $scope.position = $window.scrollY;
       $scope.windowWidth = $window.innerWidth;
       var myEl = angular.element(document.querySelector('.myHeadercss'));
+      console.log($scope.position);
       if($scope.windowWidth <= 768){
         $scope.onqueheaderConfig = {
              showSearch: false
@@ -24,7 +25,7 @@ OnqueApp.controller('homeController', [
         }
       }
       else{
-      if ($scope.position >= 295) {
+      if ($scope.position >= 294) {
        $scope.onqueheaderConfig = {
         hambergFlag: true,
         showSearch: true
@@ -33,17 +34,18 @@ OnqueApp.controller('homeController', [
      $scope.searchSection = false;
      myEl.css({'background-color':'#172636', 'opacity':'1'});
 	   }
-   else if ($scope.position < 295) {
-      	$scope.onqueheaderConfig = {
-          hambergFlag: true,
-          showSearch: false
-        }
-      $scope.searchInputSection = true;
-      if($scope.searchText != ''){
-          $scope.searchSection = true;
-      }
-        myEl.css({'background-color':'transparent', 'opacity':'1'});
-    }
+   //   else if ($scope.position < 290) {
+   //    	$scope.onqueheaderConfig = {
+   //        hambergFlag: true,
+   //        showSearch: false
+   //      }
+   //    $scope.searchInputSection = true;
+   //    if($scope.searchText != ''){
+   //        $scope.searchSection = true;
+   //    }
+   //      myEl.css({'background-color':'transparent', 'opacity':'1'});
+   //  }
+   // // $rootScope.$emit('headerSearchSectionFlag', $scope.headerSearchSection);
     $scope.$apply();
    }
 });
