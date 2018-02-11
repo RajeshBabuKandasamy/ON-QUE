@@ -29,17 +29,29 @@ OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService','Doctor
             //dataService.setSearchData($scope.headerSearchText);
             if($scope.headerSearchText != ''){
               localStorage.setItem("searchedText",JSON.stringify($scope.headerSearchText));
-              $state.go('appointment');
-          }
+              localStorage.setItem("searchedDoctorId", '');
+              if($state.current.name = "appointment"){
+                    $state.go('appointment', {}, { reload: true });
+              }else
+              {
+                $state.go('appointment');
+              }
+            }
         }
 
         $scope.headerSearchParticularDoctor = function(docId){
           //dataService.setDoctorId(docId);
           if(docId != ''){
             localStorage.setItem("searchedDoctorId",JSON.stringify(docId));
+            localStorage.setItem("searchedText",'');
+            if($state.current.name = "appointment"){
+                $state.go('appointment', {}, { reload: true });
+            }else
+            {
             $state.go('appointment');
           }
         }
+      }
 
           $scope.headerSearchKeyDownEvent = function($event){
             if($scope.headerSearchText == ''){
