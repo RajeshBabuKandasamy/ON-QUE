@@ -32,6 +32,40 @@
      padding: 0 40px;
 }
 
+.flip {
+  -webkit-perspective: 800;
+    position: relative;
+}
+
+.flip .cardPad.flipped {
+  -webkit-transform: rotatex(-180deg);
+}
+
+.flip .cardPad {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+}
+
+.flip .cardPad .cardFront {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  width: 235px !important;
+}
+
+.flip .cardPad .card {
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden ;
+  z-index: 2;
+}
+
+.flip .cardPad .cardBack {
+  -webkit-transform: rotatex(-180deg);
+    cursor: pointer;
+    height: 381px;
+}
+
  .cardBorder{
      box-shadow: 0px 0px 5px 0px rgba(178, 162, 162, 0.75);
      -moz-box-shadow: 0px 0px 5px 0px rgba(178, 162, 162, 0.75);
@@ -42,12 +76,13 @@
      background-color: #fff;
      padding: 10% 0;
 }
- .cardPad{
+
+.cardPad{
      padding: 0 5.5px;
      margin:15px 0;
      width: 245px;
 }
- .card-title{
+.card-title{
      color: #403f3f;
      font-size: 18px;
 }
@@ -325,14 +360,166 @@
      margin-bottom: 7px;
      width: 9%;
 }
+.card.cardBorder.green {
+    background-color: #2cc048;
+position: relative;
+}
+.liveTxt.green {
+    ms-transform: rotate(-40deg);
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+    right: 76%;
+    border-radius: 0;
+    padding: 2px 6px;
+    font-size: 1rem;
+    width: 28%;
+}
+.colorGreen{
+     color: #2cc048;
+}
+.card-img-top.appointImg.green {
+    background-color: #fff;
+    position: relative;
+}
+.cardBorder.green h2 {
+    font-size: 1.7rem;
+    margin-top: -20px;
+    color: #fff;
+    font-weight: 500;
+}
+.card-img-top.appointImg.green ul{
+         padding: 0;
+    position: absolute;
+    top: 33px;
+    left: 10px;
+}
+.card-img-top.appointImg.green ul li {
+    list-style-type: none;
+    line-height: 1.1;
+   
+}
+.fontBold{
+     font-weight: bold;
+}
+li.colorGreen.fontBold {
+    font-size: 2rem;
+}
+.colorgrey{
+          color: #a2a1a1;
+}
+.card-body.green {
+    margin-top: 10%;
+}
+.colorWhite{
+     color: #fff;
+}
+.colorBlack{
+     color: #172635;
+}
+.depTxt.colorLitegreen{
+     color: #7FFF00;
+     font-size: 1.3rem;
+}
+h4.card-title.mb0.green.colorWhite {
+    font-weight: 500;
+        font-size: 16.5px;
+}    
+p.card-text.green.colorWhite {
+    margin-bottom: 0;
+        font-size: 1.2rem;
+}
+.background-grey {
+    background: #2f4f4f1c;
+    padding: 5px 0;
+        opacity: 0.9;
+     margin-left: -23px;
+    margin-right: -23px;
+}
+.card-footer.green a:first-child {
+    text-decoration: none;
+}
+.card-footer.green a:first-child:hover {
+    color: #172635;
+}
+.card-footer.green .btnApp.backgroundWhite.colorGreen {
+    color: #2cc048;
+    background-color: #fff;
+    font-weight: 500;
+    margin-top: 5px;
+    padding: 2px; 
+}
+.card-body.green.sepp{
+     position: relative;
+}
+.backgroundrey{
+         position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 50%;
+}
+.sideBar span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.sideBar {
+    position: absolute;
+    right: -27px;
+    ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background-color: #fff;
+    padding: 1px 6px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    bottom: 49%;
+}
+.sideHide .sideBar{
+background-color: #2cc048;
+    right: -23px;
+}
+.sideHide .sideBar span{
+color: #fff;
+}
+.card.cardBorder.sideHide ul{
+     padding-left: 4%;    
+     text-align: left;
+}
+.card.cardBorder.sideHide li{list-style-type:none;padding: 10px 0;
+}
+.card.cardBorder.sideHide li:before{    content: '\00b7';
+    font-size: 70px;
+    color: #ccc;
+    vertical-align: bottom;
+    line-height: 25px;
+}
  @media(max-width: 767px){
-     .cardPad{
-         width: 100%;
-         margin: 50px 0 -35px 0;
+     .flip .cardPad .cardFront {
+         margin: 3px 10px 0px 10px;
     }
+    
+     .flip .cardPad .cardBack{
+         margin: 3px 10px 0px 10px;
+     }
     .navHeader{
     	margin-top: 31%;
     }
+    .navHeaders ul li a {  
+    padding: 4px 74px 5px 14px;
+  }
+  .navHeader ul li{
+    margin: 4px;
+}
+.mb1{
+     padding-left: 10px;
+}
+.showMore a {
+    width: 25%;
+}
+.navFilters ul li {
+    padding: 1px 10px;
+}
+
 }
  @media(min-width: 768px) and (max-width: 1024px){
      .cardPad {
@@ -341,6 +528,10 @@
          width: 33%;
          float: left;
     }
+    .showMore a {
+    margin-top: 20px;
+    width: 13%;
+}
 }
  @media (min-width: 1200px){
      .container {

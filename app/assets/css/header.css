@@ -86,13 +86,12 @@ body {
 
 .freeText{
     font-size: 16px;
-    padding-right: 0rem !important;
 }
 .textBackground {
     width: 219px;
     height: 18px;
     background: #2cc048;
-    padding: 0px 6px 1px 6px;
+    padding: 1px 10px 1px 10px;
     border-radius: 5px;
 }
 
@@ -178,7 +177,7 @@ li a {
     width: 19px;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .largenav {
         display: block;
     }
@@ -188,9 +187,9 @@ li a {
     .smallsearch{
         margin: 0px;
     }
-   
 }
-@media (min-width: 768px) and (max-width: 1024px){
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
     .greenTxt{
         float: left;
         bottom: 20px;
@@ -200,6 +199,18 @@ li a {
     }
     .headerText{
         float: left;
+    }
+    .textBackground {
+       padding: 0px 4px 1px 4px;
+    }
+    .searchLocation {
+       margin-left: 0;
+    }
+    .divider{
+        margin-right: -6px;
+    }
+    .navHeader{
+        margin-top: 63px;
     }
 }
 
@@ -252,8 +263,13 @@ li a {
 .onque-navbar-input{
     width: 84%;
 }
+.onque-navbar-search {
+    position: relative;
+    top: -20px;
+    left: 0px;
+}
 .onque-navbar-button{
-        width: 16%;
+        width: 12%;
 }
 .navIcons{
     width: 25px;
@@ -289,6 +305,9 @@ li a {
 }
 .myHeadercss{
     background-color: #172636 !important;
+}
+.row1{ 
+    height: 120px;
 }
 }
 

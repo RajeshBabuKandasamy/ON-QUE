@@ -6,7 +6,7 @@ OnqueApp.controller('appointmentController', [
   $scope.searchText = "";
   $scope.filterValue = "";
   $scope.showFilterResult = false;
-
+ 
   //Change Header background
   $timeout(function () {
         var myE2 = angular.element(document.querySelector('.myHeadercss'));
@@ -48,7 +48,6 @@ OnqueApp.controller('appointmentController', [
           $scope.filterValue = "";
           $scope.showFilterResult = false;
       };
-
  
  // Search for Doctor
   $scope.searchRecord = function(sdata){

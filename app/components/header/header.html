@@ -2,12 +2,12 @@
 <div id="onque-navbar">
 <div class="container-fluid">
    <div class="row row1 myHeadercss">
-      <div class="col-sm-6 col-md-4">
+      <div class="col-sm-4 col-md-4">
          <div class="row">
             <div class="navIcons" ng-click="toggleSideMenu(true)"></div>
-            <div class="col-md-4 headerText">
+            <div class="col-md-4 col-sm-6 headerText">
                <span ng-click="navigateToHome()">ONQUE</span>
-               <div class="text-right col-sm-3 col-md-3 visible-xs" >LOGIN</div>
+               <div class="text-right col-sm-3 col-md-3 visible-xs" data-toggle="modal" data-target="#myModalHorizontal" >LOGIN</div>
                <div class=" searchLocation text-right col-sm-4 col-md-4 pad0 visible-xs"> 
                   <span style="padding-right: 5px;">
                   <img src="assets/images/location.png">
@@ -19,11 +19,11 @@
                </div>
             </div>
             <div style="float:left" class="divider1 hidden-xs" >&nbsp;</div>
-            <div class="col-md-7 hidden-xs greenTxt"><span class="freeText textBackground">WANT TO LIST YOUR PRACTICE?</span>
+            <div class="col-md-7 hidden-xs greenTxt"><span class="freeText textBackground">TRY FOR FREE</span>
             </div>
          </div>
       </div>
-      <div class="onque-navbar-search smallsearch col-md-5 col-sm-3">
+      <div class="onque-navbar-search smallsearch col-md-5 col-sm-4">
          <div class="row" ng-show="onqueheaderConfig.showSearch">
             <input class="onque-navbar-input col-md-10 col-xs-10" type="" placeholder="eg: doctor name, location" name="" ng-model="headerSearchText" ng-keyup="headerSearchKeyDownEvent($event)">
             <button class="onque-navbar-button col-md-2 col-xs-2" ng-click="headerSearchDoctor()">
@@ -51,9 +51,9 @@
       </div>
       </div>
       </div>
-      <div class="col-sm-3 col-md-3 rightSide">
+      <div class="col-sm-4 col-md-3 rightSide">
          <div class="row">
-            <div class=" searchLocation text-right col-sm-4 col-md-4 pad0 hidden-xs"> 
+            <div class=" searchLocation text-right col-sm-5 col-md-4 pad0 hidden-xs"> 
                <span style="padding-right: 5px;">
                <img src="assets/images/location.png">
                </span>
@@ -64,7 +64,7 @@
             </div>
             <div class="text-right col-sm-3 col-md-3 hidden-xs loginLink" ng-click="loginPopup()">LOGIN</div>
             <div style="float:left" class="text-right divider hidden-xs" >&nbsp;</div>
-            <div class="text-right col-sm-3 col-md-3 hidden-sm hidden-xs" >SIGN UP</div>
+            <div class="text-right col-sm-4 col-md-3  hidden-xs" ng-click="signinPopup()" >SIGN UP</div>
             </ul>
          </div>
       </div>

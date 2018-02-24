@@ -2,7 +2,7 @@
  * OnqueApp header directive
  */
 
-OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService','DoctorsList','$state','dataService', function ($rootScope, $timeout, popupService, DoctorsList, $state, dataService){
+OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService','DoctorsList','$state','dataService','ngDialog', function ($rootScope, $timeout, popupService, DoctorsList, $state, dataService, ngDialog){
   
         var linker = function ($scope, element, attrs) {
 
@@ -65,10 +65,19 @@ OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService','Doctor
             $scope.headerSearchSection = data; 
          });
 
+
+          // Login Popup
           $scope.loginPopup = function() {
             //calling the popup service
             popupService.loginPopup();
           }
+          
+          //Signin Popup
+          $scope.signinPopup = function() {
+            //calling the popup service
+            popupService.signinPopup();
+          }
+          
 
           $scope.getHeaderSearchresults = function(){
                var doctorsHeaderCollection = DoctorsList.result($scope.headerSearchText);
