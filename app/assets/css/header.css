@@ -18,6 +18,9 @@ body {
 .loginLink:hover{
     cursor: pointer;
 }
+.signupLink:hover{
+    cursor: pointer;
+}
 
 .headerSearchResults{
     background-color: white;

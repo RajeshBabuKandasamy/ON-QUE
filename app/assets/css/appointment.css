@@ -34,16 +34,20 @@
 
 .flip {
   -webkit-perspective: 800;
+  -moz-perspective: 800;
     position: relative;
 }
 
 .flip .cardPad.flipped {
   -webkit-transform: rotatex(-180deg);
+  -moz-transform:rotatex(-180deg);
 }
 
 .flip .cardPad {
   -webkit-transform-style: preserve-3d;
   -webkit-transition: 0.5s;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 0.5s;
 }
 
 .flip .cardPad .cardFront {
@@ -57,11 +61,13 @@
   width: 100%;
   position: absolute;
   -webkit-backface-visibility: hidden ;
+  -moz-backface-visibility: hidden ;
   z-index: 2;
 }
 
 .flip .cardPad .cardBack {
   -webkit-transform: rotatex(-180deg);
+  -moz-transform: rotatex(-180deg);
     cursor: pointer;
     height: 381px;
 }

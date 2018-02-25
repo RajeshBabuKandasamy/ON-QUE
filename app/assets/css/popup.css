@@ -1,0 +1,67 @@
+.ngdialog-content {
+    width: 660px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    top:-96px !important;
+}
+.section1{
+	background-color: #2cc048;
+	min-height:600px;
+}
+.section2{
+	background-color: white;
+	min-height:600px;
+}
+.formStyle{
+	padding:20px;
+}
+.formLabel{
+	font-family: calibri;
+	font-size:14px;
+	color:#8B8989;
+	letter-spacing:0.35px;
+    font-weight:normal;
+}
+.otpText{
+	font-size: 12px;
+    font-family: calibri;
+    color: #424141;
+    letter-spacing: 0.43px;
+    padding-top: 30px;
+}
+.otpResend{
+	color: #028BF3;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.otpSend{
+	color: #028BF3; 
+    cursor: pointer;
+    font-family: calibri;
+    letter-spacing: 0.43px;
+    padding-top: 30px;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.agreeText{
+	color: #666666;
+    font-family: calibri;
+    font-size: 17px;
+    font-weight: normal;
+    padding-left: 10px;
+}
+.agreeTerms{
+	color: #028BF3;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.accountButton, .accountButton:hover, .accountButton:focus{
+	cursor:pointer;
+	margin-top: 15px;
+	color: #ffffff;
+    font-family: calibri;
+    font-size: 22px;
+    border: 1px solid #2cc048;
+    background-color: #2cc048;
+}
