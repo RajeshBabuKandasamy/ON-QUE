@@ -528,17 +528,22 @@ color: #fff;
 
 }
  @media(min-width: 768px) and (max-width: 1024px){
-     .cardPad {
+    .cardPad {
          padding: 0 5.5px;
          margin: 30px 1px -10px 0px;
          width: 33%;
          float: left;
     }
     .showMore a {
-    margin-top: 20px;
-    width: 13%;
+        margin-top: 20px;
+        width: 13%;
+    }
+    .navHeaders ul li a {  
+        padding: 3px 4px;
+        width:12vw;
+    }
 }
-}
+
  @media (min-width: 1200px){
      .container {
          width: 100%;

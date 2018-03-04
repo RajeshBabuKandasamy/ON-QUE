@@ -32,24 +32,3 @@ OnqueApp.factory('DoctorDetailList', ['API_URL', '$http', function (API_URL, $ht
         }
     }
 }]);
-
-// Login service
-/*OnqueApp.factory('LoginService', ['API_URL', '$http', function(API_URL, $http){
-  return{
-    auth:function(credentials){
-      var authUser = $http({
-          method:'POST',
-          dataType: 'json',
-          url: API_URL + '/login',
-          data:credentials
-        }).success(function(data){
-          return data;
-        }).error(function(err){
-          return err;
-        });
-      console.log("sssss : " + JSON.stringify(authUser));
-      return authUser;
-      
-    }
-  }
-}]);*/

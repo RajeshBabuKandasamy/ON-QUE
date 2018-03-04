@@ -77,8 +77,8 @@ OnqueApp.directive('onqueHeader',['$rootScope','$timeout','popupService','Doctor
             //calling the popup service
             popupService.signinPopup();
           }
-          
 
+          
           $scope.getHeaderSearchresults = function(){
                var doctorsHeaderCollection = DoctorsList.result($scope.headerSearchText);
                 doctorsHeaderCollection.success(function(data){

@@ -309,12 +309,8 @@ li a {
 .myHeadercss{
     background-color: #172636 !important;
 }
-.row1{ 
-    height: 120px;
-}
 }
 
 .homeTitle, .headerText, .textBackground, .rightSide{
     color:#fff;
 }
-

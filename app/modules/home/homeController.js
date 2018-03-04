@@ -20,7 +20,7 @@ OnqueApp.controller('homeController', [
       $scope.windowWidth = $window.innerWidth;
 
       var myEl = angular.element(document.querySelector('.myHeadercss'));
-
+      
         if($scope.windowWidth <= 768){
         $scope.onqueheaderConfig = {
              showSearch: false
@@ -30,6 +30,7 @@ OnqueApp.controller('homeController', [
        if($scope.searchText != ''){
           $scope.searchSection = true;
         }
+        myEl.css({'min-height':'auto'});
       }
       else{
       if ($scope.position >= 250) {

@@ -1,16 +1,32 @@
-.ngdialog-content {
+.ngdialog.ngdialog-theme-default.dialog-signup .ngdialog-content{
     width: 660px !important;
     margin: 0 auto !important;
     padding: 0 !important;
     top:-96px !important;
 }
+.ngdialog.ngdialog-theme-default.dialog-login .ngdialog-content{
+    width: 660px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    top:-96px !important;
+    height: 500px;
+}
 .section1{
 	background-color: #2cc048;
 	min-height:600px;
+    padding: 40px;
 }
 .section2{
 	background-color: white;
 	min-height:600px;
+}
+.loginsection1{
+    background-color: #FFFFFF;
+    min-height:500px;
+}
+.loginsection2{
+    background-color: #FFFFFF;
+    min-height:500px;
 }
 .formStyle{
 	padding:20px;
@@ -62,6 +78,73 @@
 	color: #ffffff;
     font-family: calibri;
     font-size: 22px;
-    border: 1px solid #2cc048;
-    background-color: #2cc048;
+    border: 1px solid #2cc048 !important;
+    background-color: #2cc048 !important;
+    letter-spacing: 0.55px;
+}
+.existingAccount{
+	font-family: calibri;
+    font-size: 17px;
+    color: #777977;
+    padding-top: 20px;
+    padding-left: 20px;
+    letter-spacing: 0.43px;
+}
+.popupLoginLink{
+	color: #2CC149;
+    text-decoration: underline;
+    font-weight:bold;
+}
+.ngdialog-close{
+	right: -10px !important;
+}
+.ngdialog-close:before{
+	font-size: 22px !important;
+}
+.btn[disabled]{
+    opacity: 1 !important;
+}
+.help-block{
+    color: red;
+    font-size: 14px;
+    display: inline;
+    font-family: calibri;
+}
+.pError{
+    border-color:1px solid red;
+}
+.pHeading{
+    color: #ffffff;
+    font-family: calibri;
+    font-size: 17.7px;
+    letter-spacing: 0.44px;
+    font-weight: bold;
+}
+.pContent{
+    color: #ffffff;
+    font-family: calibri;
+    letter-spacing: 0.44px;
+}
+.pForgot{
+    font-family: calibri;
+    font-size: 17px;
+    color: #777977;
+    padding-top: 20px;
+    padding-left: 68px;
+    letter-spacing: 0.43px;
+    cursor: pointer;
+}
+.noAccount{
+    font-family: calibri;
+    font-size: 17px;
+    color: #777977;
+    padding-top: 30px;
+    padding-left: 15px;
+    letter-spacing: 0.43px;
+}
+.popupSignupLink{
+    color: #2CC149;
+    padding-left: 20px;
+    text-decoration: underline;
+    font-weight:bold;
 }

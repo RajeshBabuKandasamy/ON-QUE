@@ -6,17 +6,23 @@ OnqueApp.controller('appointmentController', [
   $scope.searchText = "";
   $scope.filterValue = "";
   $scope.showFilterResult = false;
- 
+     
   //Change Header background
   $timeout(function () {
         var myE2 = angular.element(document.querySelector('.myHeadercss'));
-        myE2.css({'background-color':'#172636', 'opacity':'1'});
+        if($window.innerWidth <= 767){
+          myE2.css({'background-color':'#172636', 'opacity':'1','min-height':'120px'});
+        }else{
+          myE2.css({'background-color':'#172636', 'opacity':'1'});
+        }
   }, 50);
-
+  
   angular.element($window).bind("scroll", function() { 
      var myE3 = angular.element(document.querySelector('.myHeadercss'));
      myE3.css({'background-color':'#172636', 'opacity':'1'});
   });
+
+  
   
   // Match the card Height
   $scope.cardMaxHeight = function(){
