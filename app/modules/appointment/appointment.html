@@ -65,7 +65,7 @@
 <!-- Page Features -->
 <div class="row text-center row-eq-height" ng-if="searchDoctorList">
     <div class="flip">
-    <div class="col-lg-2 col-md-6 mb-4 cardPad" ng-repeat="doctor in searchDoctorList" ng-click="isFlipped = !isFlipped" ng-class="{'flipped':isFlipped}">
+    <div class="col-lg-2 col-md-6 mb-4 cardPad" ng-repeat="doctor in searchDoctorList" ng-click="isFlipped = !isFlipped" ng-class="{'flipped':isFlipped}" ng-style="{'z-index':'1000'}">
       <div class="card cardBorder cardFront">
          <span class="liveTxt">LIVE</span>
          <img class="card-img-top appointImg" ng-src="{{doctor.doctorId.pic}}" alt="Card image cap">
@@ -78,7 +78,13 @@
             <p class="card-text">{{doctor.hospitalId.addressId.street1 + ', '+ doctor.hospitalId.addressId.street2 +', '+ doctor.hospitalId.addressId.area + ', '+ doctor.hospitalId.addressId.city}}.</p>
          </div>
          <div class="card-footer">
-            <a href="#" class="btn btn-primary btnDates">period</a>
+          <p class="input-group">
+             <input type="text" class="form-control" ng-click="datePopup($event, $index)" uib-datepicker-popup="{{format}}" ng-model="employee.probation_end_date" is-open="$parent.opened[$index]" datepicker-options="dateOptions" ng-required="false" close-text="Close"/>
+            <span class="input-group-btn">
+               <button type="button" class="btn btn-default" ng-click="datePopup($event, $index)">
+                  <i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+         </p>
             <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
          </div>
       </div>
@@ -124,7 +130,10 @@
             <p class="card-text">{{doctorDetails.hospitalId.addressId.street1 + ', '+ doctorDetails.hospitalId.addressId.street2 +', '+ doctorDetails.hospitalId.addressId.area + ', '+ doctorDetails.hospitalId.addressId.city}}.</p>
          </div>
          <div class="card-footer">
-            <a href="#" class="btn btn-primary btnDates">period</a>
+            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" alt-input-formats="altInputFormats" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="datePopup()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
             <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
          </div>
       </div>
@@ -231,9 +240,6 @@
       </div>
    </div>
 </div> -->
-
-
-
 <!-- /.row -->
 <div class="row text-center row-eq-height">
    <div class="showMore">

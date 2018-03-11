@@ -6,6 +6,8 @@ OnqueApp.controller('appointmentController', [
   $scope.searchText = "";
   $scope.filterValue = "";
   $scope.showFilterResult = false;
+  $scope.opened = [];
+
      
   //Change Header background
   $timeout(function () {
@@ -22,8 +24,43 @@ OnqueApp.controller('appointmentController', [
      myE3.css({'background-color':'#172636', 'opacity':'1'});
   });
 
+  // Datepicker
+
+  $scope.today = function() {
+    $scope.dt = new Date();
+  };
+  $scope.today();
+
+  $scope.dateOptions = {
+    dateDisabled: disabled,
+    formatYear: 'yy',
+    maxDate: new Date(2020, 5, 22),
+    minDate: new Date(),
+    startingDay: 1
+  };
+
+  $scope.datePopup = function ($event, $index) {
+    if($scope.opened[$index] == true)
+    {
+      $scope.opened[$index] = false;
+    }
+    else{
+    $event.preventDefault();
+    $event.stopPropagation();
+    $scope.opened[$index] = true;
+    }
+  };
+
+  $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+  $scope.format = $scope.formats[0];
+
   
-  
+  // Disable weekend selection
+  function disabled(data) {
+    var date = data.date,
+      mode = data.mode;
+    return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+  }
   // Match the card Height
   $scope.cardMaxHeight = function(){
     var heights = $(".card-body").map(function() {
