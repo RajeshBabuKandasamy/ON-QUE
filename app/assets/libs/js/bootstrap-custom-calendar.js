@@ -7471,7 +7471,9 @@ angular.module("uib/template/datepicker/datepicker.html", []).run(["$templateCac
 
 angular.module("uib/template/datepicker/day.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("uib/template/datepicker/day.html",
-    "<table role=\"grid\" aria-labelledby=\"{{::uniqueId}}-title\" aria-activedescendant=\"{{activeDateId}}\">\n" +
+    "<div class='col-md-12 calendarRow'>"+
+    "<div class='col-md-6 calendarColumn1'>"+
+    "<table class='calenderTable'role=\"grid\" aria-labelledby=\"{{::uniqueId}}-title\" aria-activedescendant=\"{{activeDateId}}\">\n" +
     "  <thead>\n" +
     "    <tr>\n" +
     "      <th colspan=\"{{::5 + showWeeks}}\"><button id=\"{{::uniqueId}}-title\" role=\"heading\" aria-live=\"assertive\" aria-atomic=\"true\" type=\"button\" class=\"btn btn-default btn-sm uib-title\" ng-click=\"toggleMode()\" ng-disabled=\"datepickerMode === maxMode\" tabindex=\"-1\"><strong>{{title}}</strong></button></th>\n" +
@@ -7501,6 +7503,28 @@ angular.module("uib/template/datepicker/day.html", []).run(["$templateCache", fu
     "    </tr>\n" +
     "  </tbody>\n" +
     "</table>\n" +
+    "</div>"+
+    "<div class='col-md-6 calendarColumn2'>"+
+    "<table>" +
+    "    <tr>" +
+    "      <th><strong>8AM-9PM</strong></th>" +
+    "    </tr>" +
+    "    <tr>" +
+    "      <td><p>Please arrive 10 mins before your scheduled time</p></td>" +
+    "    </tr>" +
+    "    <tr class='timeRow'>" +
+    "     <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
+    "     <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
+   "      <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
+   "      <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
+   "      <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
+   "      <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
+   "      <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
+   
+    "    </tr>" +
+    "</table>" +
+    "</div>"+
+    "</div>"+
     "");
 }]);
 

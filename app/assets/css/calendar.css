@@ -2,8 +2,8 @@
     display:none;
 }
 .uib-datepicker-popup.dropdown-menu{
-	top: -242px !important;
-    left: -51px !important;
+	/*top: -242px !important;
+    left: -51px !important;*/
 }
 .uib-datepicker .uib-title{
 	text-align: left;
@@ -17,4 +17,32 @@
 }
 .showweek{
 	visibility: hidden;
+}
+.btnTime{
+	margin: 0;
+    width: 106px;
+}
+.timeRow{
+	display: flex;
+    flex-wrap: wrap;
+}
+.timeCell{
+   margin: 0.5px 0.5px 0px 0.5px;
+}
+.calendarRow{
+	margin:0;
+	padding:0;
+}
+.uib-daypicker.ng-scope {
+    width: 702px;
+}
+.calenderTable{
+	width:95%;
+}
+.calendarColumn1{
+	margin: 0px 0px 10px 0px;
+    padding: 0px;
+}
+.calendarColumn2{
+	margin: 5px 0px 10px 0px;
 }
