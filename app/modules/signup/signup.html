@@ -1,56 +1,57 @@
     <div class="row">
-    <div class="col-md-4 section1">
+    <div class="col-sm-5 section1">
       <div class="row">
         <p class="pHeading">ON-QUE</p>
-        <p class="pContent">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+        <p class="pContent">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
       </div>
     </div>
-    <div class="col-md-8 section2">
+    <div class="col-sm-7 section2">
+    <p class="popsLogo">Logo</p>
     <form name="registerform"  class="form-horizontal formStyle" role="form" ng-submit="register(registerform.$valid)" novalidate>
         <div class="form-group" ng-class="{ 'has-error' : 
              registerform.name.$invalid && !registerform.name.$pristine }">
             <label for="username" class="formLabel">Name*</label>
-            <input type="text" name="name" id="name" class="form-control" ng-model="user.name" required />
+            <input type="text" name="name" id="name" class="form-control name" ng-model="user.name" required />
             <!-- <div ng-show="registerform.firstName.$dirty && registerform.firstName.$error.required"
                class="help-block">Name is required</div> -->
         </div>
         <div class="form-group" ng-class="{ 'has-error' : 
              registerform.email.$invalid && !registerform.email.$pristine }">
             <label for="email" class="formLabel">Email Id*</label>
-            <input type="email" name="email" id="email" class="form-control" ng-model="user.email" required />
+            <input type="email" name="email" id="email" class="form-control email" ng-model="user.email" required />
         </div>
         <div class="form-group" ng-class="{ 'has-error' : 
              registerform.phone.$invalid && !registerform.phone.$pristine }">
           <div class="row">
-            <div class="col-md-9">
+            <div class="col-sm-9">
               <label for="phone" class="formLabel">Mobile #*</label>
-              <input type="text" name="phone" id="phone" class="form-control" ng-model="user.phone" required />
+              <input type="text" name="phone" id="phone" class="form-control number" ng-model="user.phone" required />
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <p class="otpSend">Send OTP</p>
             </div>
           </div>
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6">
             <label for="username" class="formLabel">Enter OTP</label>
-            <input type="text" name="number" id="number" class="form-control" ng-model="number"/>
+            <input type="text" name="number" id="number" class="form-control otp" ng-model="number"/>
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6">
             <p class="otpText">Didn't receive OTP? <span class="otpResend">Resend OTP</span></p>
             </div>
           </div>
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6">
               <label for="password" class="formLabel" >Password*</label>
-              <input type="password" class="form-control"  ng-model="password" name="password" required/>
+              <input type="password" class="form-control password"  ng-model="password" name="password" required/>
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6">
               <label for="password" class="formLabel">Confirm Password*</label>
-              <input type="password" class="form-control"  name="confirm_password" ng-model="confirm_password"  match-password="password" required>
+              <input type="password" class="form-control password"  name="confirm_password" ng-model="confirm_password"  match-password="password" required>
                <p ng-show="registerform.confirm_password.$error.matchPassword && !registerform.confirm_password.$error.required" class="help-block">Confirm password didn't match</p>
             </div>
           </div>
@@ -63,14 +64,14 @@
         </div>             
         <div class="form-actions">
           <div class="row">
-             <div class="col-md-8 col-md-offset-3"> 
+             <div class="col-sm-12"> 
                 <button type="submit" class="btn btn-primary accountButton" ng-disabled="registerform.$invalid">Create an account</button>
             </div>    
           </div>
         </div>
         <div class="form-actions">
           <div class="row">
-             <div class="col-md-9 col-md-offset-2"> 
+             <div class="col-sm-12"> 
                 <p class="existingAccount">Already have an account? <span class="popupLoginLink">Login</span></p>
             </div>    
           </div>

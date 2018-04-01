@@ -45,7 +45,7 @@ OnqueApp.controller('appointmentController', [
       $scope.opened[$index] = false;
     }
     else{
-    $event.preventDefault();
+    /*$event.preventDefault();*/
     $event.stopPropagation();
     $scope.opened[$index] = true;
     }

@@ -26,4 +26,17 @@ function popupService(ngDialog, $interval, $window, $timeout) {
 		 });
 
 	};
+
+	this.tryFreePopup = function(message, buttonText, width, callBack, timeoutTime) {
+		
+		ngDialog.open({ 
+			template: 'modules/tryFree/tryFree.html',
+			//controller: 'tryFreeController',
+			className: 'ngdialog-theme-default dialog-signup',
+			closeByDocument: false,
+        	closeByEscape: false
+		 });
+
+	};
+	
 }]); 

@@ -52,7 +52,7 @@
 
 .flip .cardPad .cardFront {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   cursor: pointer;
   width: 235px !important;
 }
@@ -62,7 +62,7 @@
   position: absolute;
   -webkit-backface-visibility: hidden ;
   -moz-backface-visibility: hidden ;
-  z-index: 2;
+  
 }
 
 .flip .cardPad .cardBack {
@@ -98,6 +98,7 @@
  .card-text {
      color: #717772;
      font-size: 15px;
+     padding: 5px 0;
 }
  .card.cardBorder:hover {
      border: 1px solid #2cc048;
@@ -498,6 +499,9 @@ color: #fff;
     color: #ccc;
     vertical-align: bottom;
     line-height: 25px;
+}
+.card-footer {
+    margin-top: 20px;
 }
  @media(max-width: 767px){
      .flip .cardPad .cardFront {

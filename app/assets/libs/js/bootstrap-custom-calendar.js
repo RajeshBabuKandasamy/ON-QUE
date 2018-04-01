@@ -7471,6 +7471,10 @@ angular.module("uib/template/datepicker/datepicker.html", []).run(["$templateCac
 
 angular.module("uib/template/datepicker/day.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("uib/template/datepicker/day.html",
+    "<div class='col-md-12 calenderHeader'>"+
+    "<button class='cancel-BT'>Cancel</button>" +
+    "<button class='ok-BT'>Ok</button>" +
+    "</div>"+
     "<div class='col-md-12 calendarRow'>"+
     "<div class='col-md-6 calendarColumn1'>"+
     "<table class='calenderTable'role=\"grid\" aria-labelledby=\"{{::uniqueId}}-title\" aria-activedescendant=\"{{activeDateId}}\">\n" +
@@ -7510,11 +7514,11 @@ angular.module("uib/template/datepicker/day.html", []).run(["$templateCache", fu
     "      <th><strong>8AM-9PM</strong></th>" +
     "    </tr>" +
     "    <tr>" +
-    "      <td><p>Please arrive 10 mins before your scheduled time</p></td>" +
+    "      <td><p class='scheduled-time'>Please arrive 10 mins before your scheduled time</p></td>" +
     "    </tr>" +
     "    <tr class='timeRow'>" +
-    "     <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
-    "     <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
+    "     <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM<p class='btn-slots-green'>slots:6</p></button></td>"+
+    "     <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM<p class='btn-slots-red'>slots:6</p></button></td>"+
    "      <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
    "      <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+
    "      <td class='timeCell'> <button type='button' class='btn btn-default btn-sm btnTime'>7AM-10AM</button></td>"+

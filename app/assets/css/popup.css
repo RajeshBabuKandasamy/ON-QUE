@@ -13,7 +13,7 @@
 }
 .section1{
 	background-color: #2cc048;
-	min-height:600px;
+	min-height:681px;
     padding: 40px;
 }
 .section2{
@@ -40,9 +40,10 @@
 }
 .otpText{
 	font-size: 12px;
+    font-weight: bold;
     font-family: calibri;
     color: #424141;
-    letter-spacing: 0.43px;
+
     padding-top: 30px;
 }
 .otpResend{
@@ -57,8 +58,9 @@
     font-family: calibri;
     letter-spacing: 0.43px;
     padding-top: 30px;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: underline;
+    font-weight: 600;
 }
 .agreeText{
 	color: #666666;
@@ -87,7 +89,7 @@
     font-size: 17px;
     color: #777977;
     padding-top: 20px;
-    padding-left: 20px;
+text-align: center;
     letter-spacing: 0.43px;
 }
 .popupLoginLink{
@@ -114,37 +116,146 @@
     border-color:1px solid red;
 }
 .pHeading{
-    color: #ffffff;
+    color: #f2f2f2;
     font-family: calibri;
     font-size: 17.7px;
     letter-spacing: 0.44px;
     font-weight: bold;
 }
 .pContent{
-    color: #ffffff;
+   color: #f2f2f2;
     font-family: calibri;
     letter-spacing: 0.44px;
+    line-height: 1.2;
 }
 .pForgot{
     font-family: calibri;
     font-size: 17px;
     color: #777977;
     padding-top: 20px;
-    padding-left: 68px;
+    text-align: center;
     letter-spacing: 0.43px;
     cursor: pointer;
+    margin-bottom: 0;
 }
 .noAccount{
     font-family: calibri;
     font-size: 17px;
     color: #777977;
-    padding-top: 30px;
-    padding-left: 15px;
+    padding-top: 15%;
+    text-align: center;
     letter-spacing: 0.43px;
+    margin-bottom: 0;
 }
 .popupSignupLink{
     color: #2CC149;
-    padding-left: 20px;
+    text-align: center;
     text-decoration: underline;
     font-weight:bold;
+    margin-bottom: 0;
 }
+
+
+.form-group .form-control.name{
+   background: url(../images/name.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-size: 4.5%;
+}
+.form-group .form-control.passwords{
+   background: url(../images/password.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-size: 4.5%;
+}
+.form-group .form-control.email{
+   background: url(../images/mail.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    
+}
+.form-group .form-control.number{
+   background: url(../images/mobile.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    
+}
+.form-group .form-control.otp{
+   background: url(../images/otp.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    
+}
+.form-group .form-control.password{
+   background: url(../images/password.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-size: 8%;
+}
+.form-group .form-control{
+    background-color: #d3d3d340 !important;
+        padding: 0 30px;
+}
+.accountButton {
+    width: 80%;
+    display: block;
+    text-align: center;
+    margin: 30px auto 0;
+}
+.accountButton:hover {
+    margin: 30px auto 0;
+}
+/* button.ngdialog-close {
+    display: none;
+} */
+.closeBtn{
+    position: absolute;
+    right: 7px;
+    top: 6px;
+}
+.loginsection1 img{
+    height: 505px;  
+}
+.popsLogo {
+    margin: 7% 0 0;
+    font-size: 2.5rem;
+    color: #e5e5e5;
+    border: 3px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 20px;
+    width: 25%;
+    font-family: Calibri;
+    font-weight: 700;
+}
+@media(min-width: 768px) and (max-width: 1024px){
+    .popsLogo {
+    margin: 0;
+}
+.section2{
+    padding-top: 5%;
+}
+.section1{
+        min-height: 690px;
+}
+.loginsection1 img {
+    height: 548px;
+}
+.loginsection2 {
+    background-color: #FFFFFF;
+    min-height: 500px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+}
+@media(max-width: 767px){
+    .popsLogo {
+    margin: 0;
+}
+.section2{
+    padding: 5% 7%;
+}
+.loginsection2 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+}   
