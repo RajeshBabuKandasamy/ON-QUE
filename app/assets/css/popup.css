@@ -3,6 +3,9 @@
     margin: 0 auto !important;
     padding: 0 !important;
     top:-96px !important;
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .ngdialog.ngdialog-theme-default.dialog-login .ngdialog-content{
     width: 660px !important;
@@ -192,6 +195,12 @@ text-align: center;
     background-position: 5px;
     background-size: 8%;
 }
+.form-group .form-control.pincode{
+   background: url(../images/pincode.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-size: 8%;
+}
 .form-group .form-control{
     background-color: #d3d3d340 !important;
         padding: 0 30px;
@@ -226,6 +235,21 @@ text-align: center;
     width: 25%;
     font-family: Calibri;
     font-weight: 700;
+}
+.bottom-txt-trial{
+       color: #f2f2f2;
+    font-family: calibri;
+    letter-spacing: 0.44px;
+    line-height: 1.2;
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+}
+.bottom-txt-trial strong{
+        font-size: 2rem;
+}
+.section1.trialsection{
+    min-height: 759px !important;
 }
 @media(min-width: 768px) and (max-width: 1024px){
     .popsLogo {

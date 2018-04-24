@@ -64,8 +64,8 @@
 <div class="container">
 <!-- Page Features -->
 <div class="row text-center row-eq-height" ng-if="searchDoctorList">
-    <div class="flip" style="position: relative;z-index:1">
-    <div class="col-lg-2 col-md-6 mb-4 cardPad" ng-repeat="doctor in searchDoctorList" ng-click="isFlipped = !isFlipped" ng-class="{'flipped':isFlipped}" style="position: relative;z-index:-999!important">
+    <div class="flip">
+    <div class="col-lg-2 col-md-6 mb-4 cardPad" ng-repeat="doctor in searchDoctorList" ng-click="isFlipped = !isFlipped" ng-class="{'flipped':isFlipped}">
       <div class="card cardBorder cardFront">
          <span class="liveTxt">LIVE</span>
          <img class="card-img-top appointImg" ng-src="{{doctor.doctorId.pic}}" alt="Card image cap">
@@ -81,11 +81,11 @@
           <p class="input-group hackyhack">
              <input type="text" class="form-control inputRenderDate" ng-click="datePopup($event, $index)" uib-datepicker-popup="{{format}}" ng-model="employee.probation_end_date" is-open="$parent.opened[$index]" datepicker-options="dateOptions" ng-required="false" close-text="Close"/>
             <span class="input-group-btn">
-               <button type="button" class="btn btn-default" ng-click="datePopup($event, $index)">
+               <button type="button" class="btn btn-default">
                   <i class="glyphicon glyphicon-calendar"></i></button>
             </span>
          </p>
-            <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
+            <a class="btn btn-primary btnApp" ng-click="bookAppointmentPopup()">Book Appointment</a>
          </div>
          <div class="col-md-12">
             <div class="col-md-6 dateCalender"></div>
@@ -168,86 +168,8 @@
    </div>
 </div>
 </div>
-
-<!-- <div class="row text-center row-eq-height" ng-if="doctorDetails">
-   <div class="col-lg-2 col-md-6 mb-4 cardPad">
-      <div class="card cardBorder green">
-         <span class="liveTxt green">LIVE FEED</span>
-         <h2>Dr John Peterson</h2>
-         <div class="card-img-top appointImg green" alt="Card image cap">
-            <ul>
-            <li class="colorGreen">CURRENT TOKEN</li>
-            <li class="colorGreen fontBold">127</li>
-            <li class="colorgrey">@04.23pm</li>
-         </ul>
-        </div>
-         <div class="card-body green">
-            <h4 class="card-title mb0 green colorWhite">Available Tokens : 6</h4>
-            <p class="depTxt colorLitegreen">Next Token #154 [@ 07.30 PM]</p>
-          
-           <div class="background-grey">
-            <p class="card-text green colorWhite">Doctor Delay for 10 mins</p>
-         </div>
-         </div>
-        
-         <div class="card-footer green">
-            <a href="#" class="colorBlack">Last updated at 06.30pm</a>
-            <a href="#" class="btn btn-primary btnApp backgroundWhite colorGreen">Back to Doctor</a>
-         </div>
-      </div>
-   </div>
-</div> -->
-<!-- <div class="row text-center row-eq-height" ng-if="doctorDetails">
-   <div class="col-lg-2 col-md-6 mb-4 cardPad">
-      <div class="card cardBorder green">
-         <span class="liveTxt green">LIVE FEED</span>
-         <h2>Dr John Peterson</h2>
-         <div class="card-img-top appointImg green" alt="Card image cap">
-            <ul>
-            <li class="fontBig colorGreen">TOKEN</li>
-            <li class="colorGreen fontBold">127</li>
-            <li class="colorgrey">now @04.23pm</li>
-         </ul>
-        </div>
-         <div class="card-body green sepp">
-            <h4 class="card-title mb0 green colorWhite">Your Token #157</h4>          
-           <div class="backgroundrey">
-            <p class="card-text green colorWhite">2 tokens ahead of you</p>
-         </div>
-         </div>
-        <div class="sideBar">
-           <span class="colorGreen">SHOW MORE</span>
-        </div>
-         <div class="card-footer green">
-            <a href="#" class="colorBlack">Last updated at 06.30pm</a>
-            <a href="#" class="btn btn-primary btnApp backgroundWhite colorGreen">Back to Doctor</a>
-         </div>
-      </div>
-   </div>
-</div> -->
-<!-- <div class="row text-center row-eq-height" ng-if="doctorDetails">
-   <div class="col-lg-2 col-md-6 mb-4 cardPad">
-      <div class="card cardBorder sideHide">
-         <ul>
-            <li>Dummy Text</li>
-            <li>Dummy Text</li>
-            <li>Dummy Text</li>
-            <li>Dummy Text</li>
-            <li>Dummy Text</li>
-            <li>Dummy Text</li>
-            
-         </ul>
-        <div class="sideBar">
-           <span class="colorGreen">SHOW MORE</span>
-        </div>
-         
-      </div>
-   </div>
-</div> -->
-<!-- /.row -->
 <div class="row text-center row-eq-height">
    <div class="showMore">
       <a href="#" class="btn btn-primary">SHOW MORE</a>
    </div>
 </div>
-<!-- </div> -->

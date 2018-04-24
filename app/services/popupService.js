@@ -38,5 +38,17 @@ function popupService(ngDialog, $interval, $window, $timeout) {
 		 });
 
 	};
+
+	this.bookAppointmentPopup = function(message, buttonText, width, callBack, timeoutTime) {
+		
+		ngDialog.open({ 
+			template: 'modules/book_appointment/book_appointment.html',
+			//controller: 'tryFreeController',
+			className: 'ngdialog-theme-default dialog-signup',
+			closeByDocument: false,
+        	closeByEscape: false
+		 });
+
+	};
 	
 }]); 

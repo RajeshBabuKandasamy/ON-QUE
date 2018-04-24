@@ -96,6 +96,7 @@ body {
     background: #2cc048;
     padding: 1px 10px 1px 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .onque-navbar-input {

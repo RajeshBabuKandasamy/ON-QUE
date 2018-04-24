@@ -1,7 +1,6 @@
-
 OnqueApp.controller('appointmentController', [
-  '$scope','$window','$timeout','$rootScope','dataService','DoctorsList','DoctorDetailList','$timeout',
-  function ($scope, $window, $timeout, $rootScope, dataService, DoctorsList, DoctorDetailList, $timeout) {	
+  '$scope','$window','$timeout','$rootScope','dataService','DoctorsList','DoctorDetailList','$timeout','popupService',
+  function ($scope, $window, $timeout, $rootScope, dataService, DoctorsList, DoctorDetailList, $timeout, popupService) {	
   
   $scope.searchText = "";
   $scope.filterValue = "";
@@ -72,6 +71,12 @@ OnqueApp.controller('appointmentController', [
     $(".card-body").height(maxHeight);
   }
 
+   // Book Appointment Popup
+          $scope.bookAppointmentPopup = function() {
+            //calling the popup service
+            popupService.bookAppointmentPopup();
+          }
+
   // show filter Parameters
      $scope.filterChange = function (s) {
             $scope.filterSelected = s;
@@ -136,5 +141,4 @@ OnqueApp.controller('appointmentController', [
     $scope.onqueheaderConfig = {
         showSearch: true
     }
-  
 }]);
