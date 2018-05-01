@@ -69,7 +69,7 @@
   -webkit-transform: rotatex(-180deg);
   -moz-transform: rotatex(-180deg);
     cursor: pointer;
-    height: 381px;
+    height: 413px;
 }
 
  .cardBorder{
@@ -115,7 +115,7 @@
  .btn{
      width: 80%;
 }
- .btn-primary.btnApp{
+ .btn-primary.btnApp, .btn-primary.btnApp:hover, .btn-primary.btnApp:active {
      color: #fff;
      background-color: #2cc048;
      border-color: #2cc048;

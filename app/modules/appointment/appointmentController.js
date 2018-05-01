@@ -72,7 +72,8 @@ OnqueApp.controller('appointmentController', [
   }
 
    // Book Appointment Popup
-          $scope.bookAppointmentPopup = function() {
+          $scope.bookAppointmentPopup = function($event) {
+            $event.stopPropagation();
             //calling the popup service
             popupService.bookAppointmentPopup();
           }

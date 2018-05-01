@@ -4,7 +4,7 @@
     padding: 0 !important;
     top:-96px !important;
     height: 600px;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 .ngdialog.ngdialog-theme-default.dialog-login .ngdialog-content{
@@ -14,6 +14,41 @@
     top:-96px !important;
     height: 500px;
 }
+.appointmentHeader{
+    padding-top: 15px;
+    font-family: calibri;
+    font-size: 22px;
+    color: #1AAe36;
+    letter-spacing: 0.55px;
+}
+.btn-group-actions{
+    display: inline-flex;
+    float: right;
+    margin-top: 20px;
+}
+.btn-confirm, .btn-confirm:hover, .btn-confirm:active, .btn-confirm:focus{
+    cursor:pointer;
+    color: #ffffff;
+    font-family: calibri;
+    font-size: 22px;
+    border: 1px solid #2cc048 !important;
+    background-color: #2cc048 !important;
+    letter-spacing: 0.55px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.btn-cancel, .btn-cancel:hover, .btn-cancel:active, .btn-cancel:focus{
+    cursor:pointer;
+    color: #676767;
+    font-family: calibri;
+    font-size: 18px;
+    border: 1px solid #ffffff !important;
+    background-color: #ffffff !important;
+    letter-spacing: 0.45px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
 .section1{
 	background-color: #2cc048;
 	min-height:681px;
@@ -22,6 +57,12 @@
 .section2{
 	background-color: white;
 	min-height:600px;
+}
+.section1.bookappointmentsection{
+    min-height: 600px !important;
+}
+.section2.bookappointmentsection{
+    padding-right: 15px;
 }
 .loginsection1{
     background-color: #FFFFFF;
@@ -157,13 +198,17 @@ text-align: center;
     font-weight:bold;
     margin-bottom: 0;
 }
-
-
 .form-group .form-control.name{
    background: url(../images/name.png);
     background-repeat: no-repeat;
     background-position: 5px;
     background-size: 4.5%;
+}
+.form-group .form-control.name1{
+   background: url(../images/name.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-size: 10%;
 }
 .form-group .form-control.passwords{
    background: url(../images/password.png);

@@ -85,7 +85,7 @@
                   <i class="glyphicon glyphicon-calendar"></i></button>
             </span>
          </p>
-            <a class="btn btn-primary btnApp" ng-click="bookAppointmentPopup()">Book Appointment</a>
+            <a class="btn btn-primary btnApp" ng-click="bookAppointmentPopup($event)">Book Appointment</a>
          </div>
          <div class="col-md-12">
             <div class="col-md-6 dateCalender"></div>
@@ -134,11 +134,14 @@
             <p class="card-text">{{doctorDetails.hospitalId.addressId.street1 + ', '+ doctorDetails.hospitalId.addressId.street2 +', '+ doctorDetails.hospitalId.addressId.area + ', '+ doctorDetails.hospitalId.addressId.city}}.</p>
          </div>
          <div class="card-footer">
-            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" alt-input-formats="altInputFormats" />
-          <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="datePopup($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-          </span>
-            <a href="#" class="btn btn-primary btnApp">Book Appointment</a>
+            <p class="input-group hackyhack">
+             <input type="text" class="form-control inputRenderDate" ng-click="datePopup($event, $index)" uib-datepicker-popup="{{format}}" ng-model="employee.probation_end_date" is-open="$parent.opened[$index]" datepicker-options="dateOptions" ng-required="false" close-text="Close"/>
+            <span class="input-group-btn">
+               <button type="button" class="btn btn-default">
+                  <i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+         </p>
+            <a class="btn btn-primary btnApp" ng-click="bookAppointmentPopup($event)">Book Appointment</a>
          </div>
       </div>
       <div class="card cardBorder green cardBack">
