@@ -23,6 +23,11 @@ OnqueApp.controller('appointmentController', [
      myE3.css({'background-color':'#172636', 'opacity':'1'});
   });
 
+  
+  $scope.dateClick = function(e){
+    e.stopPropagation();
+  }
+
   // Datepicker
 
   $scope.today = function() {

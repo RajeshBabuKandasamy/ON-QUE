@@ -79,7 +79,8 @@
          </div>
          <div class="card-footer">
           <p class="input-group hackyhack">
-             <input type="text" class="form-control inputRenderDate" ng-click="datePopup($event, $index)" uib-datepicker-popup="{{format}}" ng-model="employee.probation_end_date" is-open="$parent.opened[$index]" datepicker-options="dateOptions" ng-required="false" close-text="Close"/>
+             <!-- <input type="text" class="form-control inputRenderDate" ng-click="datePopup($event, $index)" uib-datepicker-popup="{{format}}" ng-model="employee.probation_end_date" is-open="$parent.opened[$index]" datepicker-options="dateOptions" ng-required="false" close-text="Close"/> -->
+             <input type="date" class="form-control inputRenderDate" ng-click="dateClick($event)" name="bday">
             <span class="input-group-btn">
                <button type="button" class="btn btn-default">
                   <i class="glyphicon glyphicon-calendar"></i></button>
@@ -135,7 +136,8 @@
          </div>
          <div class="card-footer">
             <p class="input-group hackyhack">
-             <input type="text" class="form-control inputRenderDate" ng-click="datePopup($event, $index)" uib-datepicker-popup="{{format}}" ng-model="employee.probation_end_date" is-open="$parent.opened[$index]" datepicker-options="dateOptions" ng-required="false" close-text="Close"/>
+             <!-- <input type="text" class="form-control inputRenderDate" ng-click="datePopup($event, $index)" uib-datepicker-popup="{{format}}" ng-model="employee.probation_end_date" is-open="$parent.opened[$index]" datepicker-options="dateOptions" ng-required="false" close-text="Close"/> -->
+             <input type="date" class="form-control inputRenderDate" ng-click="dateClick($event)" name="bday">
             <span class="input-group-btn">
                <button type="button" class="btn btn-default">
                   <i class="glyphicon glyphicon-calendar"></i></button>

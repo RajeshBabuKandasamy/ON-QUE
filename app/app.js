@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var OnqueApp = angular.module('OnqueApp', ['ui.router', 'ngDialog', 'onqueAppConfig','ngMessages','ui.bootstrap']);
+var OnqueApp = angular.module('OnqueApp', ['ui.router', 'ngDialog', 'onqueAppConfig','ngMessages']);
 
 OnqueApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   
