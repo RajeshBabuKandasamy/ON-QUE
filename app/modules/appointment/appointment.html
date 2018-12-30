@@ -78,14 +78,14 @@
             <p class="card-text">{{doctor.hospitalId.addressId.street1 + ', '+ doctor.hospitalId.addressId.street2 +', '+ doctor.hospitalId.addressId.area + ', '+ doctor.hospitalId.addressId.city}}.</p>
          </div>
          <div class="card-footer">
-          <p class="input-group hackyhack">
+          <div class="date-field">
              <!-- <input type="text" class="form-control inputRenderDate" ng-click="datePopup($event, $index)" uib-datepicker-popup="{{format}}" ng-model="employee.probation_end_date" is-open="$parent.opened[$index]" datepicker-options="dateOptions" ng-required="false" close-text="Close"/> -->
              <input type="date" class="form-control inputRenderDate" ng-click="dateClick($event)" name="bday">
-            <span class="input-group-btn">
+            <!-- <span class="input-group-btn">
                <button type="button" class="btn btn-default">
                   <i class="glyphicon glyphicon-calendar"></i></button>
-            </span>
-         </p>
+            </span> -->
+         </div>
             <a class="btn btn-primary btnApp" ng-click="bookAppointmentPopup($event)">Book Appointment</a>
          </div>
          <div class="col-md-12">
@@ -135,14 +135,14 @@
             <p class="card-text">{{doctorDetails.hospitalId.addressId.street1 + ', '+ doctorDetails.hospitalId.addressId.street2 +', '+ doctorDetails.hospitalId.addressId.area + ', '+ doctorDetails.hospitalId.addressId.city}}.</p>
          </div>
          <div class="card-footer">
-            <p class="input-group hackyhack">
+            <div class="date-field">
              <!-- <input type="text" class="form-control inputRenderDate" ng-click="datePopup($event, $index)" uib-datepicker-popup="{{format}}" ng-model="employee.probation_end_date" is-open="$parent.opened[$index]" datepicker-options="dateOptions" ng-required="false" close-text="Close"/> -->
              <input type="date" class="form-control inputRenderDate" ng-click="dateClick($event)" name="bday">
-            <span class="input-group-btn">
+            <!-- <span class="input-group-btn">
                <button type="button" class="btn btn-default">
                   <i class="glyphicon glyphicon-calendar"></i></button>
-            </span>
-         </p>
+            </span> -->
+         </div>
             <a class="btn btn-primary btnApp" ng-click="bookAppointmentPopup($event)">Book Appointment</a>
          </div>
       </div>

@@ -6,6 +6,39 @@
      width: 50%;
      height: 12rem;
 }
+.date-field{
+    padding: 0px 24px 10px 24px;
+}
+input[type="date"]::-webkit-inner-spin-button {
+  display:none;
+}
+input[type="date"] {
+  position: relative;
+  padding: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+}
+input[type="date"]::-webkit-clear-button {
+    display:none;
+}
+
+input[type="date"]:before {
+  color: transparent;
+  background: none;
+  display: block;
+  font-family: 'FontAwesome';
+  content: '\f073';
+  /* This is the calendar icon in FontAwesome */
+  width: 15px;
+  position: absolute;
+  right: 6px;
+  color: #000;
+}
+
  .bgWhite{
      background-color: #fff;
 }
